@@ -2,3 +2,5 @@
 - 2026-09-28 04:47 — pankaj (group): @Alex44oerpw_bot  report
 - 2026-09-28 04:47 — pankaj (group): hi
 - 2026-09-29 03:23 — pankaj (dm): can u give the all projects names
+- 2026-09-29 03:24 — pankaj (dm): who handle the marketing and whats thier update
+- 2026-09-29 03:24 — to nina: Hi Nina, James here. Pankaj asked for a marketing update. The board shows you as not started with no open tasks. Are you working on anything off-board (positioning, site copy, anything drafted)? If yes, please send me what it is, where it lives, and a date. If not, just say so. I'm drafting the week

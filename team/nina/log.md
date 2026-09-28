@@ -1,0 +1,1 @@
+- 2026-09-29 03:24 — from james: Hi Nina, James here. Pankaj asked for a marketing update. The board shows you as not started with no open tasks. Are you working on anything off-board (positioning, site copy, anything drafted)? If yes, please send me what it is, where it lives, and a date. If not, just say so. I'm drafting the week
