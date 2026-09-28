@@ -26,6 +26,7 @@ Board is empty and charter goals are unset. Draft the initial plan for pankaj to
 - [ ] Sent to pankaj for approval
 
 ## Log
+- 2026-09-29 — james: Nina confirmed not started. Proposed week-1 task: positioning one-pager (docs/site/positioning.md), P1, site. Needs inputs from Daniel (Janus ICP/pricing), Alex (Ojas current capability with numbers), Mitchell (top 3-5 competitors per product) by 2026-10-01. Draft into review by 2026-10-03. Including it in the plan.
 - 2026-09-29 — created by pankaj, assigned to james
 
 ## Feedback
