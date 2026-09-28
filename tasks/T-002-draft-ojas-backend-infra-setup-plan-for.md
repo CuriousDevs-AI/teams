@@ -4,7 +4,7 @@ title: Draft Ojas backend/infra setup plan for 30 Sep planning meet
 owner: marcus
 project: ojas
 priority: P1
-status: todo
+status: doing
 assigned: '2026-09-29'
 due: '2026-09-30'
 depends_on: []
@@ -26,6 +26,7 @@ Prep for the daily planning meet pankaj called for 2026-09-30 10:00.
 - [ ] States estimated ₹/month for each proposed component
 
 ## Log
+- 2026-09-29 — pankaj: doing
 - 2026-09-29 — created by pankaj, assigned to marcus
 
 ## Feedback
