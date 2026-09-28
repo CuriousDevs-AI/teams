@@ -1,0 +1,1 @@
+- 2026-09-29 03:27 — wrote docs/ojas/work-style-sofia.md
