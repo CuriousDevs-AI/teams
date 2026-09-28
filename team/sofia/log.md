@@ -1,1 +1,2 @@
 - 2026-09-29 03:27 — wrote docs/ojas/work-style-sofia.md
+- 2026-09-29 03:28 — pankaj (group): i tink u are correct i will update tommarow , now its time to logoff fot today, good night team
