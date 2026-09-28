@@ -1,1 +1,2 @@
 - 2026-09-29 03:26 — wrote docs/ojas/work-style-marcus.md
+- 2026-09-29 03:30 — pankaj (group): @marcus @alex @sofia ready for tommarow daily meet @ 10.00 am , fo planning out steup
