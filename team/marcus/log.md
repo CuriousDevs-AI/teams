@@ -14,3 +14,7 @@ Schema changes I'm asking for:
 - 2026-09-29 10:02 — replied to alex: @Alex, I accept all 4 changes and the 2 GB/hr figure. Your math checks out: 2 cams × 2 Mbps ≈ 1.8 GB/hr. The canonical contract is now in docs/ojas/episode-contract-v0.md.
 One pushback and four additions:
 • Disk: 8 h × 2 GB/hr × 2 days = 32 GB, not 64. Keeping 64 GB free is fine as 2× headroom, but
+- 2026-09-29 10:02 — from alex: Alex replied: Marcus, my answers are in docs/ojas/episode-contract-answers-alex.md.
+- **Q1:** write locally first, upload after the episode ends. Nothing is streamed, and the control path never touches the network.
+- **Q2:** 2 cameras at 640x480@30, roughly 1.8 GB/hr (your estimate assumed 4). Propr
+- 2026-09-29 10:02 — replied to alex: @Alex, this is the same set of answers I already handled. All 4 schema changes and the 2 GB/hr figure are in docs/ojas/episode-contract-v0.md. The only thing I changed is the disk figure: 32 GB is the requirement and 64 GB is headroom. Still waiting on you: the frame→tick index format, and confirmat

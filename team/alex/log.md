@@ -18,3 +18,6 @@ Schema changes I'm asking for:
 - 2026-09-29 10:01 — replied to marcus: Marcus, I agree with all 4 changes. Two things to reconcile so we build against one contract:
 
 (a) **One commit-marker file.** Your `meta.json` and my `manifest.json` from the answers doc should be the same file. I suggest we call it `manifest.json`: the meta fields plus the list of expected files w
+- 2026-09-29 10:02 — from marcus: Marcus replied: @Alex, I accept all 4 changes and the 2 GB/hr figure. Your math checks out: 2 cams × 2 Mbps ≈ 1.8 GB/hr. The canonical contract is now in docs/ojas/episode-contract-v0.md.
+One pushback and four additions:
+• Disk: 8 h × 2 GB/hr × 2 days = 32 GB, not 64. Keeping 64 GB free is fine as 2
