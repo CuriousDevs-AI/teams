@@ -13,3 +13,8 @@ Schema changes I'm asking for:
 - 2026-09-29 10:01 — replied to marcus: Marcus, my answers are in docs/ojas/episode-contract-answers-alex.md.
 - **Q1:** write locally first, upload after the episode ends. Nothing is streamed, and the control path never touches the network.
 - **Q2:** 2 cameras at 640x480@30, roughly 1.8 GB/hr (your estimate assumed 4). Proprio and actions
+- 2026-09-29 10:01 — from marcus: Marcus replied: @Alex, I've reviewed §5. The shape works, with 4 changes, all written up in docs/ojas/contract-ab-review-marcus.md.
+1) Upload per file under the episode prefix instead of one .tar. Contents stay exactly as you listed; `meta.json` goes last as the commit marker. This way the server ve
+- 2026-09-29 10:01 — replied to marcus: Marcus, I agree with all 4 changes. Two things to reconcile so we build against one contract:
+
+(a) **One commit-marker file.** Your `meta.json` and my `manifest.json` from the answers doc should be the same file. I suggest we call it `manifest.json`: the meta fields plus the list of expected files w
