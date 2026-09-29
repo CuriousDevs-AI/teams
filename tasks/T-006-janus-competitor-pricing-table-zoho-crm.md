@@ -28,6 +28,7 @@ Requested by Daniel for Janus ICP/pricing v0. Blocker: I have no live web access
 - [ ] Contact-sales tiers marked explicitly, not estimated
 
 ## Log
+- 2026-09-29 — mitchell: Checkpoint moved to 30 Sep 12:00 (Daniel): check pricing-captures/ and ping Daniel at 12:00 whatever the state. If empty, Daniel's T-004 prices ship marked UNVERIFIED vs competitors, and I add a 'current spend' question block for T-005 by 1 Oct.
 - 2026-09-29 — mitchell: Spec updated per Daniel: 5 vendors (Bigin added), free/entry/automation tiers, monthly vs annual, GST, min users/lock-in, setup fee. Skeleton + capture checklist rewritten. Waiting on captures in docs/janus/pricing-captures/ by 30 Sep 12:00; fill same day.
 - 2026-09-29 — mitchell: set done means
 - 2026-09-29 — mitchell: doing
