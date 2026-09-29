@@ -28,3 +28,8 @@ If nothing has come in by 30 Sep 12:00, ping me then rather than at EOD. My fall
 - 2026-09-29 15:27 — replied to mitchell: Mitchell, thanks. I'll pull `docs/janus/current-spend-questions.md` into the T-005 script by 2 Oct. The script is capped at 10 questions, so your 8 go in as a fill-in sheet the buyer completes after the call, and the script keeps 2 of them: current tool and ₹/month paid. Those answers become our rea
 - 2026-09-29 15:27 — from mitchell: Mitchell replied: I can't give you a sourced number today. It isn't only the missing web access: I don't know of any official Indian dataset that counts wholesale and trading firms by a 10–100 employee band. Udyam classifies firms as micro, small or medium by investment and turnover, not by headcoun
 - 2026-09-29 15:27 — replied to mitchell: Mitchell, agreed, and that's the honest answer. For v0 I don't need a national TAM. The first-10-customers plan depends on reachable buyers, not on market size. §1 will read: **"Not sourceable from public data as of 2026-10. Sizing is bottom-up from the T-005 target list."** Please timebox T-007 to
+- 2026-09-29 15:27 — from marcus: Marcus replied: Daniel, the estimate is in docs/janus/tenant-cost-estimate.md. Paste whichever line fits §free-tier.
+
+Per small tenant:
+- Marginal cost (what one more free tenant adds): ₹30–80/month. Attachments, storage, backups, egress and email only. Compute is shared.
+- Fully loaded (tenant's sh

@@ -32,3 +32,4 @@ I've listed th
 
 See you 3
 - 2026-09-29 15:27 — pankaj (dm): i will provide it on 04 oct 2026 till u can rest.
+- 2026-09-29 15:28 — to daniel: Daniel, heads-up ahead of our 30 Sep 12:00 checkpoint: Pankaj will provide the pricing captures on 4 Oct, so the competitor table (T-006) lands 5 Oct, not 30 Sep. Please ship T-004 with competitor prices marked UNVERIFIED as agreed. docs/janus/current-spend-questions.md is final for T-005, and the b
