@@ -34,3 +34,6 @@
 {"ts": 1790656368.3976908, "at": "2026-09-29T10:02:48+05:30", "kind": "agent", "who": "alex", "action": "update_task", "target": "T-003", "detail": "update T-003", "via": ""}
 {"ts": 1790656368.398365, "at": "2026-09-29T10:02:48+05:30", "kind": "agent", "who": "alex", "action": "remember", "target": "", "detail": "remember", "via": ""}
 {"ts": 1790660090.082835, "at": "2026-09-29T11:04:50+05:30", "kind": "console", "who": "pankaj", "action": "task accept", "target": "T-002", "detail": "id=T-002, action=accept", "via": "console"}
+{"ts": 1790660092.247533, "at": "2026-09-29T11:04:52+05:30", "kind": "console", "who": "pankaj", "action": "task accept", "target": "T-003", "detail": "id=T-003, action=accept", "via": "console"}
+{"ts": 1790660095.823997, "at": "2026-09-29T11:04:55+05:30", "kind": "agent", "who": "marcus", "action": "remember", "target": "", "detail": "remember", "via": ""}
+{"ts": 1790660095.825493, "at": "2026-09-29T11:04:55+05:30", "kind": "agent", "who": "marcus", "action": "remember", "target": "", "detail": "remember", "via": ""}
