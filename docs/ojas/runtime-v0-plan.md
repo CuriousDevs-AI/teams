@@ -1,100 +1,164 @@
-# Ojas runtime v0 — plan (DRAFT, 2026-09-29)
+# Ojas Runtime v0 — plan
 
-Owner: Alex · Review: 2026-09-30 10:00 daily meet
-Status: draft. **No numbers in this doc are measured yet.** Every figure is a target.
+Owner: Alex · Task: T-003 · Written: 2026-09-29 · Status: draft for review at the 10:00 meet on 2026-09-30
 
-## 1. What v0 is
-v0 is the smallest runtime that can be measured.
+**Rule for this doc:** every number here is a **target to measure**, not a result. Nothing has been benchmarked yet.
 
-- It takes one camera stream and robot state as input.
-- It runs one open policy.
-- It passes every action through a safety gate before it reaches the controller.
-- It logs every episode.
-- It has one fallback: hold position, or teleop.
+## 1. Scope
 
-Out of scope for v0:
-- multi-robot setups
-- cloud inference
-- fine-tuning
-- our own model
+**Goal of v0:** a model can drive one robot through one task. A deterministic loop owns timing and safety, and every run is logged as a trainable episode.
 
-## 2. Don't rebuild what exists
-- **Control / hardware I/O:** ROS 2 (Jazzy) + ros2_control. We do not write our own control loop framework.
-- **Episode format + training tooling:** LeRobot (LeRobotDataset: parquet + mp4). We do not invent a format.
-- **Inference:** ONNX Runtime / TensorRT on Jetson, and PyTorch on x86 for development.
-- **What Ojas adds on top:**
-  - the safety gate
-  - the deadline and fallback logic
-  - telemetry
-  - a stable API for Parth
+In v0:
+- One robot, one manipulation task (e.g. pick-and-place of one object class).
+- Teleop data collection → fine-tune an open small policy → run it through the runtime → 20-trial eval.
+- A safety envelope and a fallback ladder that do not depend on the model behaving.
+- Telemetry and episode logging on every run, including failures.
 
-## 3. Hardware target
-**Open.** It depends on what we own (question for pankaj).
+Not in v0:
+- Multiple robots or hardware targets.
+- Our own model.
+- Cloud inference.
+- Humanoid/Parth integration. That starts after we have a v0 eval number.
+- A web UI. Sofia is not needed on the runtime path yet; a dashboard comes later.
 
-- Default target: Jetson Orin (NX or AGX) for the device, plus an x86 + GPU box for development.
-- If we have no arm, v0 runs in MuJoCo sim with a cheap arm model (SO-100 class). We say that plainly in any demo.
+### Build vs reuse (decision)
+Don't rebuild what exists:
+- **LeRobot (Hugging Face).** We use it for teleop, the dataset format, and training/inference for ACT, SmolVLA and pi0-family policies.
+- **ROS 2 + ros2_control.** We use it for the hardware interface, where a driver exists.
 
-## 4. Loop and latency budget (targets)
-| Stage | Rate | Budget (p99) |
+**What we build (our value):**
+- The control-loop timing guarantees.
+- The safety envelope and fallback ladder.
+- Model-version pinning.
+- Telemetry, and eval tooling across repeated trials.
+
+## 2. Hardware target
+
+| Target | v0 role |
+|---|---|
+| Jetson Orin (NX 16GB or AGX — **assumption, pankaj to confirm what we own**) | On-robot inference + control loop. Primary target. |
+| x86 + NVIDIA GPU | Dev, training, sim, and inference fallback if the Orin budget fails. |
+| Raspberry Pi | **Not an inference target in v0.** At most an IO/motor-bus node. |
+
+Robot: **open question.** We need to know what arm or robot we have. If we have nothing, a LeRobot-native low-cost arm (SO-100/SO-101 class) is the fastest path. Buying one is 🔴 (money), so it needs pankaj's call.
+
+## 3. Architecture (processes)
+
+```
+cameras/joints ──► [sensor node] ──► obs buffer (timestamped)
+                                         │
+                   [inference worker] ◄──┘   async, 2–10 Hz, outputs action CHUNKS
+                         │
+                         ▼
+                  [action queue] ──► [control loop 50 Hz] ──► [safety envelope] ──► hardware
+                                              ▲                        │
+                          teleop override ────┘                        ▼
+                                                              [logger: episode + telemetry]
+```
+
+- The control loop never waits on inference. It consumes a queued action chunk.
+- Teleop override always wins, even over a valid model output.
+
+## 4. Latency budget (targets)
+
+| Item | Target |
+|---|---|
+| Control loop period | 20 ms (50 Hz) |
+| Control tick jitter | p99 < 2 ms |
+| Safety envelope check per tick | < 0.5 ms |
+| Inference per chunk (on Orin) | p99 < 300 ms — **unmeasured; the first thing we benchmark** |
+| Action chunk length | ~1 s (50 steps) |
+| Max observation age at action time | 500 ms, else fallback |
+| Refill trigger | when < 300 ms of chunk remains |
+
+### Safety envelope (every tick, model-independent)
+- Joint position, velocity and acceleration limits.
+- A workspace bounding box.
+- A NaN/inf check.
+- A max step delta between consecutive actions.
+- A watchdog on both the control loop and the inference worker.
+- The e-stop is hardware, not software.
+
+### Fallback ladder
+1. The new chunk is late → keep executing the remaining queued chunk.
+2. The queue is empty or the observation is too old → **hold position**.
+3. Hold lasts > 2 s, or the envelope is violated → **controlled stop** and hand to teleop.
+4. Every fallback event is logged with its cause.
+
+## 5. Device / cloud split — contract for Marcus
+
+**Rule:** nothing in the control path touches the network. The device runs fully offline.
+
+| On device | In cloud (Marcus) |
+|---|---|
+| Sensors, inference, control, safety, logging | Episode storage, dataset versioning, dedup |
+| Local episode buffer (disk) | Training jobs, model registry |
+| Model artifact cache | Eval result store |
+
+### Contract A — episode upload
+- Uploads happen after each episode, batched, and are resumable.
+- Unit: one episode bundle, sent as a `.tar` with:
+  - `meta.json`
+  - LeRobot-format parquet (states/actions)
+  - `mp4` per camera
+  - `events.jsonl` (safety and fallback events)
+- The device deletes its local copy only after the server confirms the upload **and** the checksum matches.
+
+### Contract B — model pull
+- The device pulls a model artifact by `model_id@version`, with a sha256.
+- The runtime refuses to load an artifact that is unpinned or has a mismatched hash.
+
+### `meta.json` (draft)
+```json
+{
+  "episode_id": "uuid",
+  "robot_id": "string",
+  "task": "string",
+  "runtime_version": "semver",
+  "model_id": "string|null",
+  "model_version": "string|null",
+  "mode": "teleop|policy|mixed",
+  "start_ts": "ISO8601",
+  "end_ts": "ISO8601",
+  "control_hz": 50,
+  "outcome": "success|fail|aborted|unlabelled",
+  "fallback_count": 0,
+  "safety_violations": 0,
+  "sha256": {"file": "hash"}
+}
+```
+
+## 6. Episode format
+
+- Base: the **LeRobotDataset** format. We pin the exact version at project start. We do not invent our own.
+- Our additions:
+  - `events.jsonl`, with one line per safety or fallback event: `{ts, type, cause, action_taken}`.
+  - Runtime and model version in `meta.json`.
+  - An outcome label.
+- Timestamps come from one monotonic clock on the device. Camera frames are matched to joint state within 10 ms.
+
+## 7. Eval (v0)
+
+- One task, **20 trials** per condition, fixed reset procedure.
+- Conditions: teleop baseline vs policy.
+- Report:
+  - success rate (n=20)
+  - mean time to complete
+  - fallback events per trial
+  - p50/p99 inference latency
+  - control jitter
+
+## 8. Milestones (each ≤ 5 days, will become board tasks after review)
+
+| By | Deliverable | Measured by |
 |---|---|---|
-| Low-level control (ros2_control) | 50 Hz | 20 ms period, jitter < 2 ms |
-| Camera capture + preprocess | 10 Hz | ≤ 15 ms |
-| Policy inference (small VLA / ACT, action chunk) | 5–10 Hz | ≤ 80 ms on Orin — **to be measured** |
-| Safety gate | per action | ≤ 1 ms |
+| 2026-10-06 | Control loop + safety envelope + logging, teleop only, no model | Jitter p99 measured; 10 teleop episodes recorded in the format above |
+| 2026-10-13 | Policy (ACT or SmolVLA) fine-tuned on the teleop data, running through the runtime | Inference p50/p99 on target hardware measured |
+| 2026-10-20 | 20-trial eval + first episode upload to Marcus's store | Eval table in `docs/ojas/`, bundles verified server-side |
 
-**Deadline miss:**
-- Keep executing the remaining actions in the current chunk for up to N steps.
-- After that, hold position and raise an alert.
+## 9. Decisions needed at 10:00 on 2026-09-30
 
-**Garbage output** (NaN, out of range, joint limit violated, velocity or acceleration over its cap):
-- reject the output
-- hold position
-- log the failure as a labelled event
-
-## 5. Episode / telemetry format (for Sofia and Marcus)
-We adopt LeRobotDataset. Each episode contains:
-
-- **Synced video:** mp4, one file per camera.
-- **Per-step table (parquet), one row per step:**
-  - `timestamp`
-  - `observation.state`
-  - `action`
-  - `policy_latency_ms`
-  - `safety_verdict`: one of pass / clamp / reject
-  - `fallback_active`
-- **Episode metadata:**
-  - `episode_id`
-  - `task`
-  - `robot_id`
-  - `runtime_version`
-  - `model_id`
-  - `outcome`: one of success / fail / aborted
-  - `failure_reason`
-
-Live telemetry is the same fields, streamed per step. The first dashboard screen should be episode browsing, because that data exists from day 1.
-
-## 6. Device / cloud split (with Marcus)
-**On device:**
-- inference
-- the safety gate
-- the control loop
-- local episode buffer
-
-**Cloud:**
-- episode upload
-- storage and versioning
-- dedup
-- the dashboard API
-
-**Rule:** the robot never depends on the network to act safely.
-
-## 7. Milestones (evidence-gated)
-1. **M1:** the policy runs in a loop on the target, and p50/p99 latency is measured over 1,000 steps.
-2. **M2:** the safety gate and fallback are tested using injected bad outputs. The pass criterion is 100% of injected faults caught.
-3. **M3:** 50 logged episodes on one real or sim task, with a success rate over those 50.
-4. **Next stage** (fine-tuning): only after M3 numbers exist.
-
-## 8. Open questions for 2026-09-30
-- What hardware do we own right now?
-- Which first task? (Suggestion: pick and place with one object.)
-- Is the Parth timeline asking for runtime API v0 by a specific date? (Question for Ethan.)
+1. **Hardware on hand:** which Jetson (if any), which GPU box, which robot or arm. This blocks milestone 1.
+2. **The task:** which single task we demo.
+3. **Marcus:** does the Contract A/B shape work for storage? And where do the bundles live?
+4. **Robot purchase:** if we have no robot, approve a low-cost arm purchase (🔴).

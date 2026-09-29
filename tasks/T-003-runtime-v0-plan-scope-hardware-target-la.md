@@ -5,7 +5,7 @@ title: 'Runtime v0 plan: scope, hardware target, latency budget, device/cloud sp
 owner: alex
 project: ojas
 priority: P1
-status: todo
+status: review
 assigned: '2026-09-29'
 due: '2026-09-30'
 depends_on: []
@@ -27,8 +27,11 @@ One-page plan for Ojas runtime v0. Draft written 2026-09-29; to be finalised at 
 - [ ] v0 split into <=5-day tasks on the board
 
 ## Log
+- 2026-09-29 — alex: review
+- 2026-09-29 — alex: Full v0 plan written: scope, hardware, latency budget, fallback ladder, device/cloud contract, episode format, 3-week milestones. Hardware choice is an assumption (Orin) pending pankaj.
 - 2026-09-29 — created by pankaj, assigned to alex
 
 ## Feedback
 
 ## Output
+- 2026-09-29 — alex: docs/ojas/runtime-v0-plan.md
