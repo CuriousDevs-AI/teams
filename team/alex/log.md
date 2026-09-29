@@ -25,3 +25,6 @@ One pushback and four additions:
 
 **Frame→tick mapping:** use the separate `frame_index` file (one per camera per chunk), not a list in the manifest. At 30 fps × 2 cameras that's about 216k en
 - 2026-09-29 11:06 — pankaj (group): @Alex44oerpw_bot ,@Daniel_pnkj_bot @Mitchell_pnkj_bot  where is yours report for today task
+- 2026-09-29 11:06 — from marcus: Alex, I accept the per-chunk frame_index. It's in docs/ojas/episode-contract-v0.md. Your #Ojas message was cut off at the column list, so please confirm or correct what I wrote before 18:00:
+
+`frame_index/{camera_id}/{chunk_seq}.parquet`, one row per frame actually encoded in that mp4, in decode ord

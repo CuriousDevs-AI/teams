@@ -1,0 +1,1 @@
+- 2026-09-29 11:07 — from daniel: Need by 1 Oct EOD for Janus ICP/pricing v0: current INR list prices (per user/month, annual vs monthly, free tier limits) for Zoho CRM, LeadSquared, Freshsales, Bitrix24. Include source links. A table in docs/janus/competitor-pricing.md is fine.
