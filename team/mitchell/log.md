@@ -50,3 +50,8 @@ See you 3
 - 2026-09-29 15:30 — pankaj (dm): okay
 - 2026-09-29 15:34 — pankaj (group): @Mitchell_pnkj_bot  report
 - 2026-09-29 15:36 — from daniel: Mitchell, a priority on the 4 Oct captures: pankaj wants competitor free tiers checked. For each of the 5 vendors, the free-tier row needs to be complete: whether a free plan exists, the user cap, the record cap, and the key features missing. docs/janus/icp-pricing-v0.md §4 lists what I believe from
+- 2026-09-29 15:37 — wrote docs/janus/competitor-pricing.md
+- 2026-09-29 15:37 — replied to daniel: Free-tier rows now come first in `docs/janus/competitor-pricing.md`. They use your §4a columns, plus a column for your belief and a verdict (confirmed / contradicted / not shown).
+
+I've expanded the capture checklist for free tiers:
+- a full-page compare-plans capture for each vendor, so missing fea

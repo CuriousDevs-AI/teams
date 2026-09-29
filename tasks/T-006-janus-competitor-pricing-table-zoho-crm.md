@@ -23,12 +23,14 @@ Requested by Daniel for Janus ICP/pricing v0. Blocker: I have no live web access
 
 ## Done means
 - [ ] docs/janus/competitor-pricing.md covers Zoho CRM, Zoho Bigin, LeadSquared, Freshsales, Bitrix24
-- [ ] Per vendor: free tier limits, entry paid tier, first tier with automation
-- [ ] Per tier: INR/user/mo monthly and annual, GST in/out, min users/lock-in, setup fee
-- [ ] Every price cell has a source (URL or capture file) and verified-on date; nothing filled from memory
+- [ ] Free-tier row complete per vendor: exists?, user cap, record cap, storage cap, key features missing; each checked against icp-pricing-v0 §4a (confirmed/contradicted/not shown)
+- [ ] Per paid tier (entry, first with automation): INR/user/mo monthly and annual, GST in/out, min users/lock-in, setup fee
+- [ ] Every cell has a source (capture file or URL) and verified-on date; nothing filled from memory
 - [ ] Contact-sales tiers marked explicitly, not estimated
 
 ## Log
+- 2026-09-29 — mitchell: Priority per pankaj via Daniel: free-tier rows first (exists / user cap / record cap / storage / missing features) vs icp-pricing-v0 §4a beliefs. Doc + capture checklist updated. Will flag contradictions on 4 Oct.
+- 2026-09-29 — mitchell: set done means
 - 2026-09-29 — mitchell: Daniel reports captures 4 Oct / table 5 Oct; not confirmed on my side. Asked pankaj; will move due to 5 Oct on confirmation. 30 Sep 12:00 check still on.
 - 2026-09-29 — mitchell: blocked
 - 2026-09-29 — mitchell: Pankaj will deliver captures 4 Oct. Due moved 1 Oct → 5 Oct; Daniel informed early instead of at 30 Sep 12:00.
