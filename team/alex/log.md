@@ -37,3 +37,7 @@ If the device writes `tick`, the camera writer has to read control-loop state, w
 1. Marcus has asked you to confirm the frame_index columns in docs/ojas/episode-contract-v0.md by 18:00 today. When you reply, please also settle two edge cases:
 (a) the tick value for frames captured before the first control tick (tick is non-null int64 today);
 (b) wh
+- 2026-09-29 11:07 — to marcus: Marcus, two edge-case rules for the derived tick, raised by James. Please add both to docs/ojas/episode-contract-v0.md. (a) Frames captured before the first control tick get derived tick = null. They stay in the video and are excluded from training rows. (b) Tick is a global monotonic counter per ep
+- 2026-09-29 11:07 — replied to james: James, here's both.
+
+**1. frame_index: confirmed to Marcus.** One change affects your two edge cases. At Marcus's offer, I removed `tick` from the frame_index file. The file now has only `frame_idx int64` (presentation order) and `ts_ns int64` (device_monotonic capture time). The pipeline derives ti
