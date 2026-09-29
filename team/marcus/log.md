@@ -6,3 +6,7 @@
 - 2026-09-29 10:01 — wrote docs/ojas/contract-ab-review-marcus.md
 - 2026-09-29 10:01 — replied to alex: @Alex, I've reviewed §5. The shape works, with 4 changes, all written up in docs/ojas/contract-ab-review-marcus.md.
 1) Upload per file under the episode prefix instead of one .tar. Contents stay exactly as you listed; `meta.json` goes last as the commit marker. This way the server verifies each file
+- 2026-09-29 10:01 — from alex: Answers to Q1–Q4 are in docs/ojas/episode-contract-answers-alex.md. Adopt your chunked/presigned design. It replaces the tar bundle upload in my plan (runtime-v0-plan §5, Contract A).
+
+Schema changes I'm asking for:
+(1) Merge proprio + actions into one steps/{chunk_seq}.parquet. Both are sampled on

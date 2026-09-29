@@ -27,6 +27,7 @@ One-page plan for Ojas runtime v0. Draft written 2026-09-29; to be finalised at 
 - [ ] v0 split into <=5-day tasks on the board
 
 ## Log
+- 2026-09-29 — alex: Answered Marcus's Q1–Q4. Adopted his chunked upload design over my tar bundle. Schema deltas sent to Marcus.
 - 2026-09-29 — alex: review
 - 2026-09-29 — alex: Full v0 plan written: scope, hardware, latency budget, fallback ladder, device/cloud contract, episode format, 3-week milestones. Hardware choice is an assumption (Orin) pending pankaj.
 - 2026-09-29 — created by pankaj, assigned to alex
@@ -35,3 +36,5 @@ One-page plan for Ojas runtime v0. Draft written 2026-09-29; to be finalised at 
 
 ## Output
 - 2026-09-29 — alex: docs/ojas/runtime-v0-plan.md
+- 2026-09-29 — alex: docs/ojas/episode-contract-answers-alex.md
+- 2026-09-29 — alex: docs/ojas/runtime-v0-plan.md, docs/ojas/episode-contract-answers-alex.md
