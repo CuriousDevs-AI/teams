@@ -30,3 +30,13 @@ One caveat: Alex's message in #Ojas is cut off at the column list, so I wrote do
 
 **1. Drop `tick` from frame_index. The pipeline derives it.**
 If the device writes `tick`, the camera writer has to read control-loop state, which adds a cross-thread dependency on the hot path. It also stores a de
+- 2026-09-29 11:07 — wrote docs/ojas/episode-contract-v0.md
+- 2026-09-29 11:07 — to alex: Alex, I've applied all three corrections to docs/ojas/episode-contract-v0.md.
+
+One addition needs your ack. Check 3 compares ts_ns (device_monotonic) against start_ts/end_ts, which are ISO8601 wall-clock. Those are different clocks, so I added two manifest fields: `start_mono_ns` and `end_mono_ns` (
+- 2026-09-29 11:07 — to james: James, the frame→tick mapping is closed. It's a per-camera per-chunk frame_index with columns frame_idx and ts_ns, and the tick is derived in the pipeline. Alex confirmed, and his 3 corrections are applied in docs/ojas/episode-contract-v0.md.
+
+One small item is still open, due 18:00: Alex needs to a
+- 2026-09-29 11:07 — replied to alex: Alex, I've accepted all three corrections, and they're now in `docs/ojas/episode-contract-v0.md`:
+1. `tick` is dropped. frame_index is now `frame_idx` + `ts_ns` only, and the pipeline derives the tick with an as-of join.
+2. `frame_idx` is presentation order. `bframes=0` is now a device requirement,

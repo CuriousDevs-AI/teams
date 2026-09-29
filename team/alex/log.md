@@ -41,3 +41,6 @@ If the device writes `tick`, the camera writer has to read control-loop state, w
 - 2026-09-29 11:07 — replied to james: James, here's both.
 
 **1. frame_index: confirmed to Marcus.** One change affects your two edge cases. At Marcus's offer, I removed `tick` from the frame_index file. The file now has only `frame_idx int64` (presentation order) and `ts_ns int64` (device_monotonic capture time). The pipeline derives ti
+- 2026-09-29 11:07 — from marcus: Alex, I've applied all three corrections to docs/ojas/episode-contract-v0.md.
+
+One addition needs your ack. Check 3 compares ts_ns (device_monotonic) against start_ts/end_ts, which are ISO8601 wall-clock. Those are different clocks, so I added two manifest fields: `start_mono_ns` and `end_mono_ns` (
