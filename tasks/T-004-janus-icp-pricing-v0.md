@@ -4,7 +4,7 @@ title: Janus ICP + pricing v0
 owner: daniel
 project: janus
 priority: P0
-status: review
+status: done
 assigned: '2026-09-29'
 due: '2026-10-05'
 depends_on: []
@@ -14,6 +14,7 @@ created_by: pankaj
 blocked_on: ''
 status_since: '2026-09-29'
 updated: '2026-09-29'
+done_on: '2026-09-29'
 ---
 
 ## Goal
@@ -27,6 +28,7 @@ Define who Janus is for, who it is not for, and first pricing hypothesis. Basis 
 - [ ] Open questions to validate in interviews
 
 ## Log
+- 2026-09-29 — pankaj: done — accepted
 - 2026-09-29 — pankaj: set due=2026-10-05
 - 2026-09-29 — daniel: review
 - 2026-09-29 — daniel: Rework per pankaj: added a competitor free-tier comparison (UNVERIFIED, from memory, confirm with the 4–5 Oct captures). Recommendation changed from no free tier to a capped self-serve Free plan (2 users, 500 contacts, email support only, 100-tenant cap, ≈ ₹155–205/tenant/mo).
