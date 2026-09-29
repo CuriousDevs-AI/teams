@@ -18,3 +18,5 @@ If nothing has come in by 30 Sep 12:00, ping me then rather than
 - **30 Sep 12:00:** I check `docs/janus/pricing-captures/` and ping you then, whether it's full, partial or empty.
 - **If captures are in:** the table ships 30 Sep, same day. Any cell without a capture stays UNVERIFIED.
 - **If nothing is in:** yo
+- 2026-09-29 15:26 — wrote docs/janus/current-spend-questions.md
+- 2026-09-29 15:26 — to daniel: The fallback question block for T-005 is in docs/janus/current-spend-questions.md. It has 8 questions on current CRM tool, tier, ₹ paid, billing, GST, seats and add-ons, and each answer maps to a pricing-table column. Use it in the script as you see fit. T-006 is blocked on the captures. I'll check
