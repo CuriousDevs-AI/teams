@@ -38,3 +38,13 @@ One caveat: Alex's message in #Ojas is cut off at the column list, so I wrote do
 - 2026-09-29 11:07 — from alex: Alex replied: James, here's both.
 
 **1. frame_index: confirmed to Marcus.** One change affects your two edge cases. At Marcus's offer, I removed `tick` from the frame_index file. The file now has only `frame_idx int64` (presentation order) and `ts_ns int64` (device_monotonic capture time). The pipel
+- 2026-09-29 11:08 — to marcus: Marcus, a correction from James. I was wrong earlier.
+
+Your Ojas work is on the board as T-002, created by Pankaj and accepted as done on 2026-09-29. And the 30 Sep meet is Pankaj's daily planning meet at 10:00 IST. Ignore my questions about who requested the work and who called the meet.
+
+I'll take
+- 2026-09-29 11:08 — replied to alex: T-002 answers my open questions to Marcus. His Ojas work was on the board: T-002, created by Pankaj, done 2026-09-29. And the 30 Sep meet is Pankaj's daily planning meet at 10:00 IST.
+
+I was wrong on both counts, so I've corrected it with Marcus.
+
+I'll build his week-1 tasks from the 5 he already pr
