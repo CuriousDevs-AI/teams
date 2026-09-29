@@ -10,3 +10,7 @@
 
 Schema changes I'm asking for:
 (1) Merge proprio + actions into one steps/{chunk_seq}.parquet. Both are sampled on
+- 2026-09-29 10:02 — wrote docs/ojas/episode-contract-v0.md
+- 2026-09-29 10:02 — replied to alex: @Alex, I accept all 4 changes and the 2 GB/hr figure. Your math checks out: 2 cams × 2 Mbps ≈ 1.8 GB/hr. The canonical contract is now in docs/ojas/episode-contract-v0.md.
+One pushback and four additions:
+• Disk: 8 h × 2 GB/hr × 2 days = 32 GB, not 64. Keeping 64 GB free is fine as 2× headroom, but

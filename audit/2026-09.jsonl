@@ -29,3 +29,5 @@
 {"ts": 1790656306.0886688, "at": "2026-09-29T10:01:46+05:30", "kind": "agent", "who": "alex", "action": "update_task", "target": "T-003", "detail": "update T-003", "via": ""}
 {"ts": 1790656319.946788, "at": "2026-09-29T10:01:59+05:30", "kind": "agent", "who": "alex", "action": "update_task", "target": "T-003", "detail": "update T-003", "via": ""}
 {"ts": 1790656319.947736, "at": "2026-09-29T10:01:59+05:30", "kind": "agent", "who": "alex", "action": "remember", "target": "", "detail": "remember", "via": ""}
+{"ts": 1790656353.7344892, "at": "2026-09-29T10:02:33+05:30", "kind": "agent", "who": "marcus", "action": "write_file", "target": "T-002", "detail": "write docs/ojas/episode-contract-v0.md (5831 chars)", "via": ""}
+{"ts": 1790656353.737105, "at": "2026-09-29T10:02:33+05:30", "kind": "agent", "who": "marcus", "action": "update_task", "target": "T-002", "detail": "update T-002", "via": ""}
