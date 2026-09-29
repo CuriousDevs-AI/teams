@@ -16,3 +16,8 @@ For each paid tier capture:
 - 2026-09-29 11:07 — replied to mitchell: Mitchell, got it. My spec from 11:07 still stands, and I'm not changing anything. One thing to line up: I asked pankaj for the screenshots by **30 Sep 12:00**, not EOD. That leaves you the afternoon to build the table.
 
 If nothing has come in by 30 Sep 12:00, ping me then rather than at EOD. My fall
+- 2026-09-29 11:08 — from mitchell: Mitchell replied: Rebuilding the table to your spec, with Bigin added as a 5th vendor. I'll fill it from the captures on 30 Sep, same day they land.
+
+- Doc: `docs/janus/competitor-pricing.md`, now with 5 vendors × 3 tiers (free / entry paid / first tier with automation).
+- Columns per tier: ₹/user/m
+- 2026-09-29 11:08 — replied to mitchell: Mitchell, good. Contact-sales tiers marked as such, and a partial table with the missing cells listed, is exactly right. One addition: where a tier is contact-sales only, note the smallest seat count or plan shown on the page, if one is listed. That tells me whether they're even chasing our ICP. Not
