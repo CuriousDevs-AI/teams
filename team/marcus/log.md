@@ -1,2 +1,4 @@
 - 2026-09-29 03:26 — wrote docs/ojas/work-style-marcus.md
 - 2026-09-29 03:30 — pankaj (group): @marcus @alex @sofia ready for tommarow daily meet @ 10.00 am , fo planning out steup
+- 2026-09-29 10:00 — wrote docs/ojas/setup-plan-marcus.md
+- 2026-09-29 10:00 — to alex: Before 10:00 tomorrow, please skim section 3 (episode schema v0) and section 6 (Q1–Q4 are yours) in docs/ojas/setup-plan-marcus.md. I need your answers on the device/cloud boundary and episode contents before I build ingestion.
