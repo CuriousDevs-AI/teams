@@ -4,7 +4,7 @@ title: Draft Ojas backend/infra setup plan for 30 Sep planning meet
 owner: marcus
 project: ojas
 priority: P1
-status: review
+status: done
 assigned: '2026-09-29'
 due: '2026-09-30'
 depends_on: []
@@ -14,6 +14,7 @@ created_by: pankaj
 blocked_on: ''
 status_since: '2026-09-29'
 updated: '2026-09-29'
+done_on: '2026-09-29'
 ---
 
 ## Goal
@@ -26,6 +27,7 @@ Prep for the daily planning meet pankaj called for 2026-09-30 10:00.
 - [ ] States estimated ₹/month for each proposed component
 
 ## Log
+- 2026-09-29 — pankaj: done — accepted
 - 2026-09-29 — marcus: Accepted Alex's schema changes + 2 GB/hr; canonical episode contract v0 written
 - 2026-09-29 — marcus: Reviewed Alex's runtime-v0 §5; proposed Contract A/B endpoint shapes
 - 2026-09-29 — marcus: review

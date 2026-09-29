@@ -16,3 +16,6 @@ Suggestion for my week-1 task, ≤5 days, P1, project=site:
 - Project: site. Priority: P1. Done means: as you wrot
 - 2026-09-29 03:32 — pankaj (dm): we will discuss it on morning @ 10.00 am
 - 2026-09-29 10:01 — wrote docs/plan/week-1.md
+- 2026-09-29 11:04 — pankaj (group): Good morning guys ,
+
+share  your todays task list
