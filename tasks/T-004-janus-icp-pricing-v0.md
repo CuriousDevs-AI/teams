@@ -6,7 +6,7 @@ project: janus
 priority: P0
 status: review
 assigned: '2026-09-29'
-due: '2026-10-01'
+due: '2026-10-05'
 depends_on: []
 reviewer: pankaj
 goal: ''
@@ -27,6 +27,7 @@ Define who Janus is for, who it is not for, and first pricing hypothesis. Basis 
 - [ ] Open questions to validate in interviews
 
 ## Log
+- 2026-09-29 — pankaj: set due=2026-10-05
 - 2026-09-29 — daniel: review
 - 2026-09-29 — daniel: Rework per pankaj: added a competitor free-tier comparison (UNVERIFIED, from memory, confirm with the 4–5 Oct captures). Recommendation changed from no free tier to a capped self-serve Free plan (2 users, 500 contacts, email support only, 100-tenant cap, ≈ ₹155–205/tenant/mo).
 - 2026-09-29 — pankaj: doing — changes requested
