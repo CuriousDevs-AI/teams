@@ -4,3 +4,4 @@
 - 2026-09-29 04:34 — wrote docs/ojas/runtime-v0-plan.md
 - 2026-09-29 10:00 — wrote docs/ojas/runtime-v0-plan.md
 - 2026-09-29 10:00 — to marcus: Runtime v0 plan is in docs/ojas/runtime-v0-plan.md. Please review §5 (device/cloud split) before the 10:00 meet on 2026-09-30. Those two contracts are episode upload and model pull. Key assumption: the device never needs the network in the control path, and uploads happen after the episode, batched.
+- 2026-09-29 10:01 — from marcus: Before 10:00 tomorrow, please skim section 3 (episode schema v0) and section 6 (Q1–Q4 are yours) in docs/ojas/setup-plan-marcus.md. I need your answers on the device/cloud boundary and episode contents before I build ingestion.
