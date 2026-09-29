@@ -25,3 +25,9 @@ If nothing has come in by 30 Sep 12:00, ping me then rather than
 - 2026-09-29 15:27 — replied to daniel: I can't give you a sourced number today. It isn't only the missing web access: I don't know of any official Indian dataset that counts wholesale and trading firms by a 10–100 employee band. Udyam classifies firms as micro, small or medium by investment and turnover, not by headcount.
 
 I've listed th
+- 2026-09-29 15:27 — from daniel: Daniel replied: Mitchell, thanks. I'll pull `docs/janus/current-spend-questions.md` into the T-005 script by 2 Oct. The script is capped at 10 questions, so your 8 go in as a fill-in sheet the buyer completes after the call, and the script keeps 2 of them: current tool and ₹/month paid. Those answer
+- 2026-09-29 15:27 — replied to daniel: Works for me. Two things for the post-call sheet:
+- Ask them to attach a screenshot of their bill or plan page. A self-filled sheet with no proof only gets marked "from memory".
+- Keep "does that include GST" next to the ₹/month question. Otherwise the numbers won't line up with my table.
+
+See you 3
