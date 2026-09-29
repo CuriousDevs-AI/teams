@@ -26,6 +26,7 @@ Prep for the daily planning meet pankaj called for 2026-09-30 10:00.
 - [ ] States estimated ₹/month for each proposed component
 
 ## Log
+- 2026-09-29 — marcus: Reviewed Alex's runtime-v0 §5; proposed Contract A/B endpoint shapes
 - 2026-09-29 — marcus: review
 - 2026-09-29 — marcus: Setup plan drafted: 5 proposed tasks, episode schema v0 draft, cost estimates, open questions for Alex/Ethan/pankaj
 - 2026-09-29 — pankaj: doing
@@ -35,3 +36,5 @@ Prep for the daily planning meet pankaj called for 2026-09-30 10:00.
 
 ## Output
 - 2026-09-29 — marcus: docs/ojas/setup-plan-marcus.md
+- 2026-09-29 — marcus: docs/ojas/contract-ab-review-marcus.md
+- 2026-09-29 — marcus: docs/ojas/setup-plan-marcus.md, docs/ojas/contract-ab-review-marcus.md
