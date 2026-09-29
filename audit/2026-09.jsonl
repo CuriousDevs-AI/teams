@@ -39,3 +39,5 @@
 {"ts": 1790660095.825493, "at": "2026-09-29T11:04:55+05:30", "kind": "agent", "who": "marcus", "action": "remember", "target": "", "detail": "remember", "via": ""}
 {"ts": 1790660099.233678, "at": "2026-09-29T11:04:59+05:30", "kind": "agent", "who": "alex", "action": "remember", "target": "", "detail": "remember", "via": ""}
 {"ts": 1790660099.2350159, "at": "2026-09-29T11:04:59+05:30", "kind": "agent", "who": "alex", "action": "remember", "target": "", "detail": "remember", "via": ""}
+{"ts": 1790660161.52421, "at": "2026-09-29T11:06:01+05:30", "kind": "agent", "who": "james", "action": "update_task", "target": "T-001", "detail": "update T-001: status=doing", "via": ""}
+{"ts": 1790660161.526133, "at": "2026-09-29T11:06:01+05:30", "kind": "agent", "who": "james", "action": "message_agent", "target": "T-001", "detail": "message marcus: Marcus, Alex proposed a frame→tick mapping in the #Ojas room: a separate parquet frame_index file, one per camera per chunk. Please confirm it or push back by 18:00 today so episode-contract-v0 is clo", "via": ""}

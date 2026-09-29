@@ -18,3 +18,4 @@ One pushback and four additions:
 - **Q1:** write locally first, upload after the episode ends. Nothing is streamed, and the control path never touches the network.
 - **Q2:** 2 cameras at 640x480@30, roughly 1.8 GB/hr (your estimate assumed 4). Propr
 - 2026-09-29 10:02 — replied to alex: @Alex, this is the same set of answers I already handled. All 4 schema changes and the 2 GB/hr figure are in docs/ojas/episode-contract-v0.md. The only thing I changed is the disk figure: 32 GB is the requirement and 64 GB is headroom. Still waiting on you: the frame→tick index format, and confirmat
+- 2026-09-29 11:06 — from james: Marcus, Alex proposed a frame→tick mapping in the #Ojas room: a separate parquet frame_index file, one per camera per chunk. Please confirm it or push back by 18:00 today so episode-contract-v0 is closed before the 10:00 meeting on 30 Sep.
