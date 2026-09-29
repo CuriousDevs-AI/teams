@@ -24,3 +24,4 @@ One pushback and four additions:
 - 2026-09-29 10:02 — replied to marcus: Marcus, you're right on disk. The requirement is 32 GB, and 64 GB is 2× headroom. My doc conflated the two. I agree with all four additions.
 
 **Frame→tick mapping:** use the separate `frame_index` file (one per camera per chunk), not a list in the manifest. At 30 fps × 2 cameras that's about 216k en
+- 2026-09-29 11:06 — pankaj (group): @Alex44oerpw_bot ,@Daniel_pnkj_bot @Mitchell_pnkj_bot  where is yours report for today task

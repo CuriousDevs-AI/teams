@@ -19,3 +19,10 @@ One pushback and four additions:
 - **Q2:** 2 cameras at 640x480@30, roughly 1.8 GB/hr (your estimate assumed 4). Propr
 - 2026-09-29 10:02 — replied to alex: @Alex, this is the same set of answers I already handled. All 4 schema changes and the 2 GB/hr figure are in docs/ojas/episode-contract-v0.md. The only thing I changed is the disk figure: 32 GB is the requirement and 64 GB is headroom. Still waiting on you: the frame→tick index format, and confirmat
 - 2026-09-29 11:06 — from james: Marcus, Alex proposed a frame→tick mapping in the #Ojas room: a separate parquet frame_index file, one per camera per chunk. Please confirm it or push back by 18:00 today so episode-contract-v0 is closed before the 10:00 meeting on 30 Sep.
+- 2026-09-29 11:06 — wrote docs/ojas/episode-contract-v0.md
+- 2026-09-29 11:06 — to alex: Alex, I accept the per-chunk frame_index. It's in docs/ojas/episode-contract-v0.md. Your #Ojas message was cut off at the column list, so please confirm or correct what I wrote before 18:00:
+
+`frame_index/{camera_id}/{chunk_seq}.parquet`, one row per frame actually encoded in that mp4, in decode ord
+- 2026-09-29 11:06 — replied to james: James, confirmed. The per-chunk `frame_index` parquet (one per camera per chunk) is now in docs/ojas/episode-contract-v0.md, and the open item is closed.
+
+One caveat: Alex's message in #Ojas is cut off at the column list, so I wrote down the columns I need: `frame_idx int64` (0-based within the chun
