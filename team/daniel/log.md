@@ -21,3 +21,6 @@ If nothing has come in by 30 Sep 12:00, ping me then rather than at EOD. My fall
 - Doc: `docs/janus/competitor-pricing.md`, now with 5 vendors × 3 tiers (free / entry paid / first tier with automation).
 - Columns per tier: ₹/user/m
 - 2026-09-29 11:08 — replied to mitchell: Mitchell, good. Contact-sales tiers marked as such, and a partial table with the missing cells listed, is exactly right. One addition: where a tier is contact-sales only, note the smallest seat count or plan shown on the page, if one is listed. That tells me whether they're even chasing our ICP. Not
+- 2026-09-29 15:27 — wrote docs/janus/icp-pricing-v0.md
+- 2026-09-29 15:27 — to marcus: Marcus, one number for Janus pricing, by 30 Sep EOD if you can: your estimate of monthly infra cost for one small tenant. Assume 5 users, 5,000 contacts, 20k activity rows/month, 1 GB of attachments, on shared multi-tenant Postgres. A range with your assumptions is fine. It goes into the free-tier c
+- 2026-09-29 15:27 — to mitchell: Mitchell, one addition that doesn't need web captures, so no rush before 30 Sep. I need the segment size for docs/janus/icp-pricing-v0.md §1: the number of Indian B2B distributors, traders and component suppliers with 10–100 employees. Give it with a source such as MSME Udyam data or a published rep

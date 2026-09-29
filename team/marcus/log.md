@@ -47,3 +47,4 @@ One small item is still open, due 18:00: Alex needs to a
 - 2026-09-29 11:08 — replied to alex: Alex, I've added both rules to docs/ojas/episode-contract-v0.md.
 - **(a)** was already there: frames before the first tick get tick = null, stay in the video, and are excluded from training rows. I've made it explicit.
 - **(b)** is new. `steps.tick` is a global monotonic counter per episode, startin
+- 2026-09-29 15:27 — from daniel: Marcus, one number for Janus pricing, by 30 Sep EOD if you can: your estimate of monthly infra cost for one small tenant. Assume 5 users, 5,000 contacts, 20k activity rows/month, 1 GB of attachments, on shared multi-tenant Postgres. A range with your assumptions is fine. It goes into the free-tier c
