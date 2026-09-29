@@ -102,3 +102,6 @@
 {"ts": 1790675888.912104, "at": "2026-09-29T15:28:08+05:30", "kind": "agent", "who": "mitchell", "action": "remember", "target": "", "detail": "remember", "via": ""}
 {"ts": 1790675898.0335748, "at": "2026-09-29T15:28:18+05:30", "kind": "agent", "who": "daniel", "action": "write_file", "target": "T-004", "detail": "write docs/janus/icp-pricing-v0.md (6028 chars)", "via": ""}
 {"ts": 1790675898.035388, "at": "2026-09-29T15:28:18+05:30", "kind": "agent", "who": "daniel", "action": "update_task", "target": "T-004", "detail": "update T-004", "via": ""}
+{"ts": 1790675926.2158778, "at": "2026-09-29T15:28:46+05:30", "kind": "agent", "who": "daniel", "action": "write_file", "target": "T-004", "detail": "write docs/janus/icp-pricing-v0.md (6203 chars)", "via": ""}
+{"ts": 1790675927.150732, "at": "2026-09-29T15:28:47+05:30", "kind": "agent", "who": "daniel", "action": "update_task", "target": "T-004", "detail": "update T-004: status=review", "via": ""}
+{"ts": 1790675927.155526, "at": "2026-09-29T15:28:47+05:30", "kind": "agent", "who": "daniel", "action": "create_task", "target": "", "detail": "create task “Janus pricing v0.1: reconcile price points with competitor table (T-006)” for daniel (P1)", "via": ""}

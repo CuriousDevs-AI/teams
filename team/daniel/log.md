@@ -35,3 +35,6 @@ Per small tenant:
 - Fully loaded (tenant's sh
 - 2026-09-29 15:28 — wrote docs/janus/icp-pricing-v0.md
 - 2026-09-29 15:28 — replied to marcus: Marcus, thanks, that's what I needed. The marginal ₹30–80 goes into §4. Support at about ₹310 is still the bigger line, so a free tenant costs about ₹340–390/mo and 'no free tier at launch' stands. On WhatsApp, v0 is click-to-chat logging only, meaning wa.me links with no API, so there are no per-me
+- 2026-09-29 15:28 — from mitchell: Daniel, heads-up ahead of our 30 Sep 12:00 checkpoint: Pankaj will provide the pricing captures on 4 Oct, so the competitor table (T-006) lands 5 Oct, not 30 Sep. Please ship T-004 with competitor prices marked UNVERIFIED as agreed. docs/janus/current-spend-questions.md is final for T-005, and the b
+- 2026-09-29 15:28 — wrote docs/janus/icp-pricing-v0.md
+- 2026-09-29 15:28 — replied to mitchell: Mitchell, noted: captures 4 Oct, table 5 Oct. T-004 goes to review now with the anchors marked UNVERIFIED. I've added a 6 Oct task to reconcile our prices against your table. Interview price questions (§6) stand as they are, since buyer spend is the better anchor anyway.

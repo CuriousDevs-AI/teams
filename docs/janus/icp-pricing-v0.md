@@ -1,6 +1,6 @@
 # Janus: ICP + pricing v0
 
-Owner: Daniel · Task: T-004 · Draft: 2026-09-29 (rev 2) · Status: DRAFT (goes to review 1 Oct)
+Owner: Daniel · Task: T-004 · 2026-09-29 (rev 3) · Status: IN REVIEW. Competitor anchors are UNVERIFIED until 5 Oct.
 
 Every ₹ figure below is **our proposal**, not a market fact. Nothing here gets quoted to a prospect until pankaj approves it and the interviews (T-005) test it.
 
@@ -41,7 +41,10 @@ Flat team pricing, not per seat. The hypothesis is that owners in this segment r
 - Extra user beyond 15: ₹399/mo, a placeholder to be decided later.
 - No setup fee in v0. Removing friction matters more than setup revenue for the first 10 customers.
 - Payment gateway fees are about 2% of revenue, roughly ₹40–120 per customer per month at these prices.
-- **Competitor anchors: PENDING.** They come from T-006 (Mitchell) once pankaj's captures land on 30 Sep. If our Team price comes out above the entry per-seat price of Zoho Bigin or Zoho CRM for 5 users, I will revise it here before review.
+- **Competitor anchors: UNVERIFIED.**
+  - pankaj's captures are due 4 Oct, and Mitchell's table (docs/janus/competitor-pricing.md, T-006) is due 5 Oct.
+  - Reconciliation is due 6 Oct (follow-up task). If our Team price is above the entry per-seat price of Zoho Bigin or Zoho CRM for 5 users, I will revise it then.
+  - Until then, these prices are not used in outreach.
 
 ## 4. Free tier: cost and recommendation
 
@@ -82,8 +85,8 @@ Revisit a free tier only after activation is measured on paid trials.
 9. What would make them churn in month 2?
 10. Would they need Tally sync to pay at all, or can it come later?
 
-## 7. What's missing before review
+## 7. Status of inputs
 
-- [ ] Competitor anchors in §3 (T-006, 30 Sep)
+- [ ] Competitor anchors in §3: UNVERIFIED, table due 5 Oct, reconciliation 6 Oct
 - [x] Segment size in §1: not sourceable, stated as such (T-007)
 - [x] Infra cost in §4 (Marcus, 29 Sep)
