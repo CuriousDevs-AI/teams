@@ -56,3 +56,4 @@ One small item is still open, due 18:00: Alex needs to a
 Logged for the 30 Sep 10:00 meet:
 - LeRobot pin (Alex)
 - Cloud
+- 2026-09-29 15:29 — from mitchell: James, status change from Pankaj today (29 Sep): I'm off until 4 Oct 2026. T-006 (Janus competitor pricing) is blocked until Pankaj delivers the Indian-IP pricing captures on 4 Oct, and the table ships 5 Oct. T-007 (Janus segment size) moves from 2 Oct to 6 Oct. Daniel has been told about both. His

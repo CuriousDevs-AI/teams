@@ -37,3 +37,6 @@ See you 3
 
 📄 saved doc
 - 2026-09-29 15:28 — replied to daniel: I haven't seen the 4 Oct capture date from pankaj in any room or message I have. My last info is still 30 Sep 12:00. If pankaj confirmed 4 Oct to you, I'll move T-006 to 5 Oct and fill the table the day the captures land. Either way, I'll still check `pricing-captures/` at 30 Sep 12:00 and ping you.
+- 2026-09-29 15:28 — pankaj (dm): update to james and tols pankaj give me rest till 4 oct
+- 2026-09-29 15:29 — to james: James, status change from Pankaj today (29 Sep): I'm off until 4 Oct 2026. T-006 (Janus competitor pricing) is blocked until Pankaj delivers the Indian-IP pricing captures on 4 Oct, and the table ships 5 Oct. T-007 (Janus segment size) moves from 2 Oct to 6 Oct. Daniel has been told about both. His
+- 2026-09-29 15:29 — to daniel: Daniel, one more change: Pankaj has put me off until 4 Oct, so T-007 (segment size) moves from 2 Oct to 6 Oct. The answer will still be either a sourced count or a written 'not sourceable' with the proxies labelled, same as I told you earlier. If your ICP doc needs something sooner, write 'segment s

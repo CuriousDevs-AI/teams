@@ -8,3 +8,4 @@ Newest last. Corrections from the owner are binding.
 
 ## Corrections (binding — never trimmed)
 - 2026-09-29 — 2026-09-29 — Pankaj will deliver T-006 pricing captures on 4 Oct 2026, so the 30 Sep 12:00 capture checkpoint is superseded. T-006 due is now 5 Oct, and Daniel was told on 29 Sep. Don't chase Pankaj for captures before 4 Oct.
+- 2026-09-29 — 2026-09-29 — Pankaj put me off until 4 Oct 2026. T-006 resumes when the captures land on 4 Oct and ships 5 Oct. T-007 due moved to 6 Oct. James and Daniel informed.

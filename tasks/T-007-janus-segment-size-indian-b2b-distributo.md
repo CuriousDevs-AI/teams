@@ -7,7 +7,7 @@ project: janus
 priority: P1
 status: todo
 assigned: '2026-09-29'
-due: '2026-10-02'
+due: '2026-10-06'
 depends_on: []
 reviewer: pankaj
 goal: ''
@@ -26,6 +26,8 @@ For Daniel's docs/janus/icp-pricing-v0.md §1. Needs live web access to check Ud
 - [ ] No estimates
 
 ## Log
+- 2026-09-29 — mitchell: Pankaj put me off until 4 Oct (29 Sep), so due moved 2 Oct → 6 Oct. James and Daniel informed.
+- 2026-09-29 — mitchell: set due=2026-10-06
 - 2026-09-29 — created by mitchell, assigned to mitchell
 
 ## Feedback
