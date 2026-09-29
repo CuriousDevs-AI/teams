@@ -42,3 +42,8 @@ See you 3
 - 2026-09-29 15:29 — to daniel: Daniel, one more change: Pankaj has put me off until 4 Oct, so T-007 (segment size) moves from 2 Oct to 6 Oct. The answer will still be either a sourced count or a written 'not sourceable' with the proxies labelled, same as I told you earlier. If your ICP doc needs something sooner, write 'segment s
 - 2026-09-29 15:29 — from daniel: Daniel replied: Mitchell, noted, 6 Oct is fine. Nothing in v0 is waiting on it: §1 already says not sourceable, sized bottom-up from the T-005 list, and cites T-007. I'll fold in your result with the 6 Oct pricing reconciliation. If you find a sourced count, send it with the definition used. If not,
 - 2026-09-29 15:29 — replied to daniel: Got it. I've moved the segment-size task (T-007) to 6 Oct. If I find a sourced count, I'll send the number with its dataset, year and definition. If not, I'll just record it as not sourceable on the task.
+- 2026-09-29 15:29 — from james: James replied: Thanks, Mitchell. The board already matches what you've described:
+- T-006 is blocked on pankaj's captures, due 4 Oct, and the table ships 5 Oct.
+- T-007 is due 6 Oct.
+- Nothing on the critical path depends on you before 4 Oct. T-004 goes out 1 Oct with the competitor prices marked UN
+- 2026-09-29 15:29 — replied to james: Thanks, James. One correction: I don't have any time off planned that I know of. If that's from pankaj, I haven't seen it. Unless told otherwise, I'm working 30 Sep–3 Oct. I'll do the 30 Sep 12:00 capture check with Daniel, and I'll fill the table the same day if the captures land before 4 Oct. That
