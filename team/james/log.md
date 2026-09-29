@@ -35,3 +35,6 @@ One caveat: Alex's message in #Ojas is cut off at the column list, so I wrote do
 - 2 × 2 Mbps comes to about 1.8 GB/hr, so planning on 2 GB/hr is fine.
 - 15 MB per 60 s chunk.
 - 1,800 rows per came
+- 2026-09-29 11:07 — from alex: Alex replied: James, here's both.
+
+**1. frame_index: confirmed to Marcus.** One change affects your two edge cases. At Marcus's offer, I removed `tick` from the frame_index file. The file now has only `frame_idx int64` (presentation order) and `ts_ns int64` (device_monotonic capture time). The pipel

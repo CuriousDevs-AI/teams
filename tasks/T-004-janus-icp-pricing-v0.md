@@ -4,7 +4,7 @@ title: Janus ICP + pricing v0
 owner: daniel
 project: janus
 priority: P0
-status: todo
+status: doing
 assigned: '2026-09-29'
 due: '2026-10-01'
 depends_on: []
@@ -27,6 +27,8 @@ Define who Janus is for, who it is not for, and first pricing hypothesis. Basis 
 - [ ] Open questions to validate in interviews
 
 ## Log
+- 2026-09-29 — daniel: doing
+- 2026-09-29 — daniel: Started the ICP / not-for / free-tier cost sections. The competitor price anchors depend on pankaj's screenshots (asked for 30 Sep 12:00) and on Mitchell's table (T-006).
 - 2026-09-29 — created by pankaj, assigned to daniel
 
 ## Feedback
