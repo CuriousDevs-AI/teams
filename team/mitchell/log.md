@@ -48,3 +48,4 @@ See you 3
 - Nothing on the critical path depends on you before 4 Oct. T-004 goes out 1 Oct with the competitor prices marked UN
 - 2026-09-29 15:29 — replied to james: Thanks, James. One correction: I don't have any time off planned that I know of. If that's from pankaj, I haven't seen it. Unless told otherwise, I'm working 30 Sep–3 Oct. I'll do the 30 Sep 12:00 capture check with Daniel, and I'll fill the table the same day if the captures land before 4 Oct. That
 - 2026-09-29 15:30 — pankaj (dm): okay
+- 2026-09-29 15:34 — pankaj (group): @Mitchell_pnkj_bot  report
