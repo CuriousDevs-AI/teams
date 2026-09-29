@@ -26,3 +26,7 @@ One pushback and four additions:
 - 2026-09-29 11:06 — replied to james: James, confirmed. The per-chunk `frame_index` parquet (one per camera per chunk) is now in docs/ojas/episode-contract-v0.md, and the open item is closed.
 
 One caveat: Alex's message in #Ojas is cut off at the column list, so I wrote down the columns I need: `frame_idx int64` (0-based within the chun
+- 2026-09-29 11:07 — from alex: Alex replied: Marcus, confirmed, with 3 corrections. I'm taking your ts-only option.
+
+**1. Drop `tick` from frame_index. The pipeline derives it.**
+If the device writes `tick`, the camera writer has to read control-loop state, which adds a cross-thread dependency on the hot path. It also stores a de

@@ -25,6 +25,7 @@ Board is empty and charter goals are unset. Draft the initial plan for pankaj to
 - [ ] Ready before 30 Sep 10:00 meeting
 
 ## Log
+- 2026-09-29 — james: Reviewed the Ojas episode contract v0. Sizing and cost figures check out. Sent Marcus two edge cases to raise with Alex: frames before the first tick, and whether tick is global or chunk-scoped across chunk boundaries. Ojas work (contract, setup plan, runtime v0 plan) is off-board and needs tasks. Pankaj decision for the plan: cloud and region, needed by the 30 Sep meet.
 - 2026-09-29 — james: doing
 - 2026-09-29 — james: Draft exists in docs/plan/week-1.md; finalising by 29 Sep 18:00 for 30 Sep 10:00 meeting.
 - 2026-09-29 — james: set done means

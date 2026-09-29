@@ -32,3 +32,8 @@ One pushback and four additions:
 
 **1. Drop `tick` from frame_index. The pipeline derives it.**
 If the device writes `tick`, the camera writer has to read control-loop state, which adds a cross-thread dependency on the hot path. It also stores a derived value th
+- 2026-09-29 11:07 — from james: Alex, James here. Two things.
+
+1. Marcus has asked you to confirm the frame_index columns in docs/ojas/episode-contract-v0.md by 18:00 today. When you reply, please also settle two edge cases:
+(a) the tick value for frames captured before the first control tick (tick is non-null int64 today);
+(b) wh

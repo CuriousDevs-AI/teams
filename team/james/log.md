@@ -26,3 +26,12 @@ share  your todays task list
 - 2026-09-29 11:06 — from marcus: Marcus replied: James, confirmed. The per-chunk `frame_index` parquet (one per camera per chunk) is now in docs/ojas/episode-contract-v0.md, and the open item is closed.
 
 One caveat: Alex's message in #Ojas is cut off at the column list, so I wrote down the columns I need: `frame_idx int64` (0-based
+- 2026-09-29 11:07 — to alex: Alex, James here. Two things.
+
+1. Marcus has asked you to confirm the frame_index columns in docs/ojas/episode-contract-v0.md by 18:00 today. When you reply, please also settle two edge cases:
+(a) the tick value for frames captured before the first control tick (tick is non-null int64 today);
+(b) wh
+- 2026-09-29 11:07 — replied to marcus: Marcus, I've read docs/ojas/episode-contract-v0.md. The arithmetic checks out, and so does the reasoning for not putting the frame→tick mapping in the manifest. The numbers I checked:
+- 2 × 2 Mbps comes to about 1.8 GB/hr, so planning on 2 GB/hr is fine.
+- 15 MB per 60 s chunk.
+- 1,800 rows per came
