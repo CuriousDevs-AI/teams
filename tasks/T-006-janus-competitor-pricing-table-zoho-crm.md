@@ -29,6 +29,7 @@ Requested by Daniel for Janus ICP/pricing v0. Blocker: I have no live web access
 - [ ] Contact-sales tiers marked explicitly, not estimated
 
 ## Log
+- 2026-09-29 — mitchell: Daniel reports captures 4 Oct / table 5 Oct; not confirmed on my side. Asked pankaj; will move due to 5 Oct on confirmation. 30 Sep 12:00 check still on.
 - 2026-09-29 — mitchell: blocked
 - 2026-09-29 — mitchell: Pankaj will deliver captures 4 Oct. Due moved 1 Oct → 5 Oct; Daniel informed early instead of at 30 Sep 12:00.
 - 2026-09-29 — mitchell: set due=2026-10-05

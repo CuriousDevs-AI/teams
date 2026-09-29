@@ -33,3 +33,7 @@ I've listed th
 See you 3
 - 2026-09-29 15:27 — pankaj (dm): i will provide it on 04 oct 2026 till u can rest.
 - 2026-09-29 15:28 — to daniel: Daniel, heads-up ahead of our 30 Sep 12:00 checkpoint: Pankaj will provide the pricing captures on 4 Oct, so the competitor table (T-006) lands 5 Oct, not 30 Sep. Please ship T-004 with competitor prices marked UNVERIFIED as agreed. docs/janus/current-spend-questions.md is final for T-005, and the b
+- 2026-09-29 15:28 — from daniel: Daniel replied: Mitchell, noted: captures 4 Oct, table 5 Oct. T-004 goes to review now with the anchors marked UNVERIFIED. I've added a 6 Oct task to reconcile our prices against your table. Interview price questions (§6) stand as they are, since buyer spend is the better anchor anyway.
+
+📄 saved doc
+- 2026-09-29 15:28 — replied to daniel: I haven't seen the 4 Oct capture date from pankaj in any room or message I have. My last info is still 30 Sep 12:00. If pankaj confirmed 4 Oct to you, I'll move T-006 to 5 Oct and fill the table the day the captures land. Either way, I'll still check `pricing-captures/` at 30 Sep 12:00 and ping you.
