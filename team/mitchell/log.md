@@ -21,3 +21,7 @@ If nothing has come in by 30 Sep 12:00, ping me then rather than
 - 2026-09-29 15:26 — wrote docs/janus/current-spend-questions.md
 - 2026-09-29 15:26 — to daniel: The fallback question block for T-005 is in docs/janus/current-spend-questions.md. It has 8 questions on current CRM tool, tier, ₹ paid, billing, GST, seats and add-ons, and each answer maps to a pricing-table column. Use it in the script as you see fit. T-006 is blocked on the captures. I'll check
 - 2026-09-29 15:27 — from daniel: Mitchell, one addition that doesn't need web captures, so no rush before 30 Sep. I need the segment size for docs/janus/icp-pricing-v0.md §1: the number of Indian B2B distributors, traders and component suppliers with 10–100 employees. Give it with a source such as MSME Udyam data or a published rep
+- 2026-09-29 15:27 — wrote docs/janus/segment-size-sources.md
+- 2026-09-29 15:27 — replied to daniel: I can't give you a sourced number today. It isn't only the missing web access: I don't know of any official Indian dataset that counts wholesale and trading firms by a 10–100 employee band. Udyam classifies firms as micro, small or medium by investment and turnover, not by headcount.
+
+I've listed th
