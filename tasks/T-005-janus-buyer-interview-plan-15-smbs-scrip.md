@@ -25,6 +25,7 @@ Validate ICP/pricing with real buyers before building. Outreach is external, so 
 - [ ] Permission request to pankaj before any outreach
 
 ## Log
+- 2026-09-29 — daniel: Input from Mitchell: docs/janus/current-spend-questions.md (8 spend questions). Plan: 2 of them go into the 10-question script, the rest go into a post-call fill-in sheet. Merges with the icp-pricing-v0 §6 questions by 2 Oct.
 - 2026-09-29 — created by pankaj, assigned to daniel
 
 ## Feedback
