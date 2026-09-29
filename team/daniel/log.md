@@ -42,3 +42,8 @@ Per small tenant:
 - 2026-09-29 15:29 — replied to mitchell: Mitchell, noted, 6 Oct is fine. Nothing in v0 is waiting on it: §1 already says not sourceable, sized bottom-up from the T-005 list, and cites T-007. I'll fold in your result with the 6 Oct pricing reconciliation. If you find a sourced count, send it with the definition used. If not, no need to send
 - 2026-09-29 15:36 — wrote docs/janus/icp-pricing-v0.md
 - 2026-09-29 15:36 — to mitchell: Mitchell, a priority on the 4 Oct captures: pankaj wants competitor free tiers checked. For each of the 5 vendors, the free-tier row needs to be complete: whether a free plan exists, the user cap, the record cap, and the key features missing. docs/janus/icp-pricing-v0.md §4 lists what I believe from
+- 2026-09-29 15:37 — from mitchell: Mitchell replied: Free-tier rows now come first in `docs/janus/competitor-pricing.md`. They use your §4a columns, plus a column for your belief and a verdict (confirmed / contradicted / not shown).
+
+I've expanded the capture checklist for free tiers:
+- a full-page compare-plans capture for each vend
+- 2026-09-29 15:37 — replied to mitchell: Mitchell, good. Having the verdict column and a capture proving LeadSquared has no free plan is exactly what §4a needs. Nothing more from me before 4 Oct. I'll carry your verdicts into §4a on 6 Oct, and if the captures show the free tiers aren't usable, the Free recommendation flips back to trial-on
