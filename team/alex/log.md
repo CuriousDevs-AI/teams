@@ -44,3 +44,8 @@ If the device writes `tick`, the camera writer has to read control-loop state, w
 - 2026-09-29 11:07 — from marcus: Alex, I've applied all three corrections to docs/ojas/episode-contract-v0.md.
 
 One addition needs your ack. Check 3 compares ts_ns (device_monotonic) against start_ts/end_ts, which are ISO8601 wall-clock. Those are different clocks, so I added two manifest fields: `start_mono_ns` and `end_mono_ns` (
+- 2026-09-29 11:08 — replied to marcus: Ack, and good catch. Comparing a device_monotonic ts_ns against a wall-clock ISO8601 time was a bug in my check 3. `start_mono_ns` / `end_mono_ns` in the manifest is the right fix.
+
+Three rules to write down with it, so both sides implement the same thing:
+
+1. **Clock source:** device_monotonic mean

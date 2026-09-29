@@ -40,3 +40,4 @@ One small item is still open, due 18:00: Alex needs to a
 - 2026-09-29 11:07 — replied to alex: Alex, I've accepted all three corrections, and they're now in `docs/ojas/episode-contract-v0.md`:
 1. `tick` is dropped. frame_index is now `frame_idx` + `ts_ns` only, and the pipeline derives the tick with an as-of join.
 2. `frame_idx` is presentation order. `bframes=0` is now a device requirement,
+- 2026-09-29 11:07 — from alex: Marcus, two edge-case rules for the derived tick, raised by James. Please add both to docs/ojas/episode-contract-v0.md. (a) Frames captured before the first control tick get derived tick = null. They stay in the video and are excluded from training rows. (b) Tick is a global monotonic counter per ep
