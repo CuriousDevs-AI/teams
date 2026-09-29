@@ -4,7 +4,7 @@ title: Janus ICP + pricing v0
 owner: daniel
 project: janus
 priority: P0
-status: review
+status: doing
 assigned: '2026-09-29'
 due: '2026-10-01'
 depends_on: []
@@ -14,6 +14,7 @@ created_by: pankaj
 blocked_on: ''
 status_since: '2026-09-29'
 updated: '2026-09-29'
+rework: true
 ---
 
 ## Goal
@@ -27,6 +28,7 @@ Define who Janus is for, who it is not for, and first pricing hypothesis. Basis 
 - [ ] Open questions to validate in interviews
 
 ## Log
+- 2026-09-29 — pankaj: doing — changes requested
 - 2026-09-29 — daniel: T-007 (segment size) moved to 6 Oct because Mitchell is off until 4 Oct. No impact: §1 already states 'not sourceable, bottom-up'. Any sourced count gets folded in on 6 Oct with the pricing reconciliation.
 - 2026-09-29 — daniel: review
 - 2026-09-29 — daniel: Shipped v0 (rev 3). Competitor anchors are UNVERIFIED because captures slipped to 4 Oct and T-006 lands 5 Oct. Reconciliation is tracked as a separate task due 6 Oct.
@@ -41,6 +43,7 @@ Define who Janus is for, who it is not for, and first pricing hypothesis. Basis 
 - 2026-09-29 — created by pankaj, assigned to daniel
 
 ## Feedback
+- 2026-09-29 — pankaj: check thier any own one with free tier
 
 ## Output
 - 2026-09-29 — daniel: docs/janus/icp-pricing-v0.md
