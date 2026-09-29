@@ -27,6 +27,7 @@ Define who Janus is for, who it is not for, and first pricing hypothesis. Basis 
 - [ ] Open questions to validate in interviews
 
 ## Log
+- 2026-09-29 — daniel: §4 filled from Marcus (docs/janus/tenant-cost-estimate.md): infra ₹30–80 marginal, free tenant ≈ ₹340–390/mo including support. §1 segment size set to 'not sourceable, bottom-up'. Only the competitor anchors (T-006, 30 Sep) remain before review.
 - 2026-09-29 — daniel: Segment size: Mitchell reports no public dataset cuts trading × 10–100 employees (docs/janus/segment-size-sources.md). §1 will state 'not sourceable, sized bottom-up from the T-005 list'. The done-means 'size' check is met by that stated definition, not by an estimate.
 - 2026-09-29 — daniel: doing
 - 2026-09-29 — daniel: Draft v0 written: ICP, not-for list, 2 price points, free-tier cost model and open questions. Still missing: competitor anchors (T-006, 30 Sep), the segment count (Mitchell) and the per-tenant infra cost (Marcus). Moves to review 1 Oct.

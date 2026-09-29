@@ -1,6 +1,6 @@
 # Janus: ICP + pricing v0
 
-Owner: Daniel · Task: T-004 · Draft: 2026-09-29 · Status: DRAFT (goes to review 1 Oct)
+Owner: Daniel · Task: T-004 · Draft: 2026-09-29 (rev 2) · Status: DRAFT (goes to review 1 Oct)
 
 Every ₹ figure below is **our proposal**, not a market fact. Nothing here gets quoted to a prospect until pankaj approves it and the interviews (T-005) test it.
 
@@ -18,7 +18,7 @@ Every ₹ figure below is **our proposal**, not a market fact. Nothing here gets
 | Pain | Leads and quote follow-ups are lost when a rep leaves or goes quiet. The owner cannot see the pipeline without calling each rep. |
 | Switch trigger | Headcount crosses about 5 reps, **or** a rep leaves and takes the customer relationships and WhatsApp history with him, **or** a large deal is lost for lack of follow-up. |
 | Why us over Zoho/Freshsales | Setup done for them in 1 day (import from their Excel), a WhatsApp-first workflow, flat team pricing, and Hindi/English support on a phone call. *(Positioning hypothesis.)* |
-| Segment size | **UNKNOWN.** Mitchell has been asked for a sourced count. I will not estimate it. |
+| Segment size | **Not sourceable from public data as of 2026-10.** Udyam classifies by investment and turnover, not headcount (see docs/janus/segment-size-sources.md, T-007). Sizing is bottom-up from the reachable T-005 target list. v0 needs reachable buyers, not a TAM. |
 
 ## 2. Not for (v0)
 
@@ -35,29 +35,31 @@ Flat team pricing, not per seat. The hypothesis is that owners in this segment r
 
 | Plan | Users | Monthly billing | Annual billing (per month) | Includes |
 |---|---|---|---|---|
-| **Team** | up to 5 | ₹2,499 | ₹1,999 | Contacts, deals pipeline, follow-up reminders, Excel import, WhatsApp click-to-chat logging, owner dashboard |
-| **Business** | up to 15 | ₹5,999 | ₹4,999 | Everything in Team, plus simple automation (auto-assign, overdue alerts), rep-wise reports, 1 onboarding call plus data import done by us |
+| **Team** | up to 5 | ₹2,499 | ₹1,999 | Contacts, deals pipeline, follow-up reminders, Excel import, WhatsApp click-to-chat logging (wa.me links, no API), owner dashboard. 1 GB attachments. |
+| **Business** | up to 15 | ₹5,999 | ₹4,999 | Everything in Team, plus simple automation (auto-assign, overdue alerts), rep-wise reports, 1 onboarding call plus data import done by us. 5 GB attachments. |
 
 - Extra user beyond 15: ₹399/mo, a placeholder to be decided later.
 - No setup fee in v0. Removing friction matters more than setup revenue for the first 10 customers.
+- Payment gateway fees are about 2% of revenue, roughly ₹40–120 per customer per month at these prices.
 - **Competitor anchors: PENDING.** They come from T-006 (Mitchell) once pankaj's captures land on 30 Sep. If our Team price comes out above the entry per-seat price of Zoho Bigin or Zoho CRM for 5 users, I will revise it here before review.
 
 ## 4. Free tier: cost and recommendation
 
-**Recommendation: no free tier at launch.** Use a 14-day trial with a done-for-you import instead.
+**Recommendation: no free tier at launch.** Use a 14-day trial (1 GB attachment cap) with a done-for-you import instead.
 
-Cost model for one free tenant per month. All inputs are assumptions until measured:
+Cost of one free tenant per month:
 
-| Item | Assumption | ₹/tenant/mo |
+| Item | Source / assumption | ₹/tenant/mo |
 |---|---|---|
-| Infra (shared Postgres, storage, email) | Marcus asked for an estimate | UNKNOWN |
-| Support | 2 tickets × 15 min, plus a one-off 45-min onboarding call amortised over 6 months ≈ 37 min/mo | ≈ ₹310 at an assumed ₹500/hr loaded cost |
-| **Total** | | **≈ ₹310 + infra** |
+| Infra, marginal (storage, backups, egress, email; compute is shared) | Marcus, docs/janus/tenant-cost-estimate.md. Cloud list prices not yet verified, region undecided. | ₹30–80 |
+| Support | 2 tickets × 15 min, plus a one-off 45-min onboarding call amortised over 6 months ≈ 37 min/mo, at an assumed ₹500/hr loaded cost | ≈ ₹310 |
+| **Total** | | **≈ ₹340–390** |
+
+Fully loaded platform share (from Marcus): ₹230–420 at 50 tenants, ₹130–250 at 100, ₹50–110 at 500. This excludes messaging, gateway and AI costs.
 
 Why no free tier:
-- For this segment, support cost dominates infra cost.
-- A free user costs about as much to support as a paying one.
-- At 100 free tenants that is roughly ₹31k/mo plus infra, and it buys no revenue signal.
+- Support is about 80% of the cost of a free tenant.
+- 100 free tenants would cost about ₹34–39k/mo and give us no revenue signal.
 - We need 10 paying customers, not 100 free ones.
 
 Revisit a free tier only after activation is measured on paid trials.
@@ -70,7 +72,7 @@ Revisit a free tier only after activation is measured on paid trials.
 ## 6. Open questions for interviews (T-005)
 
 1. What do they use today to track leads and follow-ups, and who maintains it?
-2. What do they pay today for software per month, in total and per tool? *(This is our real price anchor.)*
+2. What do they pay today for software per month, in total and per tool? *(This is our real price anchor. Detail goes in Mitchell's docs/janus/current-spend-questions.md sheet.)*
 3. Have they tried Zoho, Bigin, Freshsales or LeadSquared? Why did they stop?
 4. Flat team price or per user: which do they prefer, and why?
 5. Would they pay ₹1,999–₹2,499/mo for up to 5 users? If not, what number?
@@ -83,5 +85,5 @@ Revisit a free tier only after activation is measured on paid trials.
 ## 7. What's missing before review
 
 - [ ] Competitor anchors in §3 (T-006, 30 Sep)
-- [ ] Segment count in §1 (Mitchell)
-- [ ] Infra cost in §4 (Marcus)
+- [x] Segment size in §1: not sourceable, stated as such (T-007)
+- [x] Infra cost in §4 (Marcus, 29 Sep)

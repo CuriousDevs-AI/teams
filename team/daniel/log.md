@@ -33,3 +33,5 @@ If nothing has come in by 30 Sep 12:00, ping me then rather than at EOD. My fall
 Per small tenant:
 - Marginal cost (what one more free tenant adds): ₹30–80/month. Attachments, storage, backups, egress and email only. Compute is shared.
 - Fully loaded (tenant's sh
+- 2026-09-29 15:28 — wrote docs/janus/icp-pricing-v0.md
+- 2026-09-29 15:28 — replied to marcus: Marcus, thanks, that's what I needed. The marginal ₹30–80 goes into §4. Support at about ₹310 is still the bigger line, so a free tenant costs about ₹340–390/mo and 'no free tier at launch' stands. On WhatsApp, v0 is click-to-chat logging only, meaning wa.me links with no API, so there are no per-me
