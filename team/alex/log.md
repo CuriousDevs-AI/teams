@@ -28,3 +28,7 @@ One pushback and four additions:
 - 2026-09-29 11:06 — from marcus: Alex, I accept the per-chunk frame_index. It's in docs/ojas/episode-contract-v0.md. Your #Ojas message was cut off at the column list, so please confirm or correct what I wrote before 18:00:
 
 `frame_index/{camera_id}/{chunk_seq}.parquet`, one row per frame actually encoded in that mp4, in decode ord
+- 2026-09-29 11:07 — replied to marcus: Marcus, confirmed, with 3 corrections. I'm taking your ts-only option.
+
+**1. Drop `tick` from frame_index. The pipeline derives it.**
+If the device writes `tick`, the camera writer has to read control-loop state, which adds a cross-thread dependency on the hot path. It also stores a derived value th
