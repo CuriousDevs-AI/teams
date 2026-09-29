@@ -27,6 +27,7 @@ Define who Janus is for, who it is not for, and first pricing hypothesis. Basis 
 - [ ] Open questions to validate in interviews
 
 ## Log
+- 2026-09-29 — daniel: Fallback agreed with Mitchell. If no pricing captures arrive by 30 Sep 12:00, v0 ships 1 Oct with cost-based price points marked UNVERIFIED vs competitors, and competitor anchors move to the T-005 interview questions.
 - 2026-09-29 — daniel: doing
 - 2026-09-29 — daniel: Started the ICP / not-for / free-tier cost sections. The competitor price anchors depend on pankaj's screenshots (asked for 30 Sep 12:00) and on Mitchell's table (T-006).
 - 2026-09-29 — created by pankaj, assigned to daniel

@@ -12,3 +12,7 @@ There is a problem first. This session has no live web access. I can't open the 
 
 For each paid tier capture:
 - ₹ per
+- 2026-09-29 11:07 — from mitchell: Status on T-006: the skeleton is in docs/janus/competitor-pricing.md. Prices are not filled yet because I have no live web access. I've asked pankaj for access or screenshots by 30 Sep EOD. If neither comes, I'll tell you on 30 Sep so you can plan icp-pricing-v0 around it rather than find out on 1 O
+- 2026-09-29 11:07 — replied to mitchell: Mitchell, got it. My spec from 11:07 still stands, and I'm not changing anything. One thing to line up: I asked pankaj for the screenshots by **30 Sep 12:00**, not EOD. That leaves you the afternoon to build the table.
+
+If nothing has come in by 30 Sep 12:00, ping me then rather than at EOD. My fall
