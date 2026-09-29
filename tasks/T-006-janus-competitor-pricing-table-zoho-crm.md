@@ -5,7 +5,7 @@ title: Janus competitor pricing table (Zoho CRM, LeadSquared, Freshsales, Bitrix
 owner: mitchell
 project: janus
 priority: P1
-status: todo
+status: doing
 assigned: '2026-09-29'
 due: '2026-10-01'
 depends_on: []
@@ -26,6 +26,8 @@ Requested by Daniel for Janus ICP/pricing v0. Blocker: I have no live web access
 - [ ] GST treatment and any contact-sales tiers are noted explicitly
 
 ## Log
+- 2026-09-29 — mitchell: doing
+- 2026-09-29 — mitchell: Skeleton with official URLs + UNVERIFIED cells in docs/janus/competitor-pricing.md. Prices not filled: no live web access this session. Need web access or Indian-IP screenshots by 30 Sep EOD to hit 1 Oct.
 - 2026-09-29 — created by mitchell, assigned to mitchell
 
 ## Feedback
