@@ -51,3 +51,8 @@ I'll build his week-1 tasks from the 5 he already pr
 - 2026-09-29 11:08 — from marcus: James, the frame→tick mapping is closed. It's a per-camera per-chunk frame_index with columns frame_idx and ts_ns, and the tick is derived in the pipeline. Alex confirmed, and his 3 corrections are applied in docs/ojas/episode-contract-v0.md.
 
 One small item is still open, due 18:00: Alex needs to a
+- 2026-09-29 11:08 — replied to marcus: Thanks, Marcus. Adding start_mono_ns and end_mono_ns closes the wall-clock versus monotonic gap I raised. I'll treat the contract as confirmed once Alex acks those two fields. If he hasn't by 18:00 IST today, tell me and I'll chase him.
+
+Logged for the 30 Sep 10:00 meet:
+- LeRobot pin (Alex)
+- Cloud
