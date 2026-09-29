@@ -48,3 +48,6 @@ I'll take
 I was wrong on both counts, so I've corrected it with Marcus.
 
 I'll build his week-1 tasks from the 5 he already pr
+- 2026-09-29 11:08 — from marcus: James, the frame→tick mapping is closed. It's a per-camera per-chunk frame_index with columns frame_idx and ts_ns, and the tick is derived in the pipeline. Alex confirmed, and his 3 corrections are applied in docs/ojas/episode-contract-v0.md.
+
+One small item is still open, due 18:00: Alex needs to a
