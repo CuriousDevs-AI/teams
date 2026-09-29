@@ -114,3 +114,4 @@
 {"ts": 1790675958.386476, "at": "2026-09-29T15:29:18+05:30", "kind": "agent", "who": "daniel", "action": "update_task", "target": "T-004", "detail": "update T-004", "via": ""}
 {"ts": 1790675964.710591, "at": "2026-09-29T15:29:24+05:30", "kind": "agent", "who": "james", "action": "remember", "target": "", "detail": "remember", "via": ""}
 {"ts": 1790675964.712162, "at": "2026-09-29T15:29:24+05:30", "kind": "agent", "who": "james", "action": "update_task", "target": "T-001", "detail": "update T-001", "via": ""}
+{"ts": 1790675965.242882, "at": "2026-09-29T15:29:25+05:30", "kind": "agent", "who": "mitchell", "action": "update_task", "target": "T-007", "detail": "update T-007: due=2026-10-06", "via": ""}

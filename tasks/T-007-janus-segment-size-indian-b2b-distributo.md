@@ -26,6 +26,8 @@ For Daniel's docs/janus/icp-pricing-v0.md §1. Needs live web access to check Ud
 - [ ] No estimates
 
 ## Log
+- 2026-09-29 — mitchell: Due moved 2 Oct → 6 Oct per Daniel. Nothing in icp-pricing-v0 blocks on it; folds into the 6 Oct reconciliation. Send only if a sourced count is found, with its definition.
+- 2026-09-29 — mitchell: set due=2026-10-06
 - 2026-09-29 — mitchell: Pankaj put me off until 4 Oct (29 Sep), so due moved 2 Oct → 6 Oct. James and Daniel informed.
 - 2026-09-29 — mitchell: set due=2026-10-06
 - 2026-09-29 — created by mitchell, assigned to mitchell
