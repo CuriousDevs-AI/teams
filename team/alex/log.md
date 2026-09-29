@@ -21,3 +21,6 @@ Schema changes I'm asking for:
 - 2026-09-29 10:02 — from marcus: Marcus replied: @Alex, I accept all 4 changes and the 2 GB/hr figure. Your math checks out: 2 cams × 2 Mbps ≈ 1.8 GB/hr. The canonical contract is now in docs/ojas/episode-contract-v0.md.
 One pushback and four additions:
 • Disk: 8 h × 2 GB/hr × 2 days = 32 GB, not 64. Keeping 64 GB free is fine as 2
+- 2026-09-29 10:02 — replied to marcus: Marcus, you're right on disk. The requirement is 32 GB, and 64 GB is 2× headroom. My doc conflated the two. I agree with all four additions.
+
+**Frame→tick mapping:** use the separate `frame_index` file (one per camera per chunk), not a list in the manifest. At 30 fps × 2 cameras that's about 216k en
