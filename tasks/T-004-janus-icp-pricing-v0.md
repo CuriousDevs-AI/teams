@@ -27,6 +27,7 @@ Define who Janus is for, who it is not for, and first pricing hypothesis. Basis 
 - [ ] Open questions to validate in interviews
 
 ## Log
+- 2026-09-29 — daniel: T-007 (segment size) moved to 6 Oct because Mitchell is off until 4 Oct. No impact: §1 already states 'not sourceable, bottom-up'. Any sourced count gets folded in on 6 Oct with the pricing reconciliation.
 - 2026-09-29 — daniel: review
 - 2026-09-29 — daniel: Shipped v0 (rev 3). Competitor anchors are UNVERIFIED because captures slipped to 4 Oct and T-006 lands 5 Oct. Reconciliation is tracked as a separate task due 6 Oct.
 - 2026-09-29 — daniel: §4 filled from Marcus (docs/janus/tenant-cost-estimate.md): infra ₹30–80 marginal, free tenant ≈ ₹340–390/mo including support. §1 segment size set to 'not sourceable, bottom-up'. Only the competitor anchors (T-006, 30 Sep) remain before review.
