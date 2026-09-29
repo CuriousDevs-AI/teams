@@ -31,3 +31,4 @@ I've listed th
 - Keep "does that include GST" next to the ₹/month question. Otherwise the numbers won't line up with my table.
 
 See you 3
+- 2026-09-29 15:27 — pankaj (dm): i will provide it on 04 oct 2026 till u can rest.

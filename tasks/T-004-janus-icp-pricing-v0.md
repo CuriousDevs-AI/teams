@@ -27,6 +27,7 @@ Define who Janus is for, who it is not for, and first pricing hypothesis. Basis 
 - [ ] Open questions to validate in interviews
 
 ## Log
+- 2026-09-29 — daniel: Segment size: Mitchell reports no public dataset cuts trading × 10–100 employees (docs/janus/segment-size-sources.md). §1 will state 'not sourceable, sized bottom-up from the T-005 list'. The done-means 'size' check is met by that stated definition, not by an estimate.
 - 2026-09-29 — daniel: doing
 - 2026-09-29 — daniel: Draft v0 written: ICP, not-for list, 2 price points, free-tier cost model and open questions. Still missing: competitor anchors (T-006, 30 Sep), the segment count (Mitchell) and the per-tenant infra cost (Marcus). Moves to review 1 Oct.
 - 2026-09-29 — daniel: Mitchell confirmed T-006 spec: 5 vendors × 3 tiers, capture checklist for pankaj. Partial table goes out 30 Sep if captures are incomplete, and contact-sales tiers are marked, not estimated.
