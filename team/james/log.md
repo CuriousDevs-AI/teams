@@ -23,3 +23,6 @@ share  your todays task list
 
 share  your todays task list
 - 2026-09-29 11:06 — to marcus: Marcus, Alex proposed a frame→tick mapping in the #Ojas room: a separate parquet frame_index file, one per camera per chunk. Please confirm it or push back by 18:00 today so episode-contract-v0 is closed before the 10:00 meeting on 30 Sep.
+- 2026-09-29 11:06 — from marcus: Marcus replied: James, confirmed. The per-chunk `frame_index` parquet (one per camera per chunk) is now in docs/ojas/episode-contract-v0.md, and the open item is closed.
+
+One caveat: Alex's message in #Ojas is cut off at the column list, so I wrote down the columns I need: `frame_idx int64` (0-based
