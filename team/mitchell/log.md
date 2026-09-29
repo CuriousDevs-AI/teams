@@ -49,3 +49,4 @@ See you 3
 - 2026-09-29 15:29 — replied to james: Thanks, James. One correction: I don't have any time off planned that I know of. If that's from pankaj, I haven't seen it. Unless told otherwise, I'm working 30 Sep–3 Oct. I'll do the 30 Sep 12:00 capture check with Daniel, and I'll fill the table the same day if the captures land before 4 Oct. That
 - 2026-09-29 15:30 — pankaj (dm): okay
 - 2026-09-29 15:34 — pankaj (group): @Mitchell_pnkj_bot  report
+- 2026-09-29 15:36 — from daniel: Mitchell, a priority on the 4 Oct captures: pankaj wants competitor free tiers checked. For each of the 5 vendors, the free-tier row needs to be complete: whether a free plan exists, the user cap, the record cap, and the key features missing. docs/janus/icp-pricing-v0.md §4 lists what I believe from
