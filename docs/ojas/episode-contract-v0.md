@@ -1,14 +1,14 @@
 # Ojas episode contract v0 (canonical)
 
 Owners: Marcus (storage/API) + Alex (runtime). Date: 2026-09-29.
-Status: **confirmed by Alex (frame_index + corrections 1–3). Pending Alex's ack on 2 manifest fields: `start_mono_ns` and `end_mono_ns` (asked 2026-09-29, due 18:00).**
+Status: **Confirmed by Alex (frame_index, corrections 1–3, derived-tick rules a–b). One item pending: Alex's ack on the manifest fields `start_mono_ns` / `end_mono_ns`, or the fallback. Due 2026-09-29 18:00.**
 
 Supersedes:
 - `setup-plan-marcus.md` §3
 - `contract-ab-review-marcus.md` §Contract A
 - `runtime-v0-plan.md` §5 Contract A
 
-Inputs: `episode-contract-answers-alex.md`, and Alex in #Ojas and inbox on 2026-09-29 (frame_index, ts-only, bframes=0, pipeline checks).
+Inputs: `episode-contract-answers-alex.md`; Alex in #Ojas and inbox on 2026-09-29 (frame_index, ts-only, bframes=0, pipeline checks); derived-tick edge cases from James via Alex on 2026-09-29.
 
 ## Rules
 - The device writes locally, in 60 s chunks. Upload starts after the episode ends and only while the robot is idle. Nothing in the control path touches the network.
@@ -33,7 +33,8 @@ episodes/{robot_id}/{episode_id}/events.jsonl
 tick int64 · ts_ns int64 · obs_state list<float32> · action_raw list<float32>
 action_cmd list<float32> · clamped bool · mode string (teleop|policy|hold|stop)
 ```
-The per-tick `mode` is not the same as the episode-level `mode`. The two use different enums on purpose.
+- **`tick` is a global monotonic counter per episode, starting at 0.** It does not reset per chunk. Chunk k+1 continues from the last tick of chunk k.
+- The per-tick `mode` is not the same as the episode-level `mode`. The two use different enums on purpose.
 
 ## `frame_index` parquet (one per camera per chunk)
 Each file covers the mp4 with the same `camera_id` and `chunk_seq`. It has one row per frame actually encoded in that mp4:
@@ -41,19 +42,25 @@ Each file covers the mp4 with the same `camera_id` and `chunk_seq`. It has one r
 frame_idx int64   -- 0-based within the chunk; the frame's position in the decoded (presentation) output of the mp4
 ts_ns     int64   -- capture time, device_monotonic (same clock as steps.ts_ns)
 ```
-- There is no `tick` column. The pipeline derives it with an as-of join: tick = the latest `steps.tick` with `steps.ts_ns <= frame ts_ns`. Frames captured before the first tick get tick = null and are excluded from training rows.
 - Dropped frames: no row. A drop shows up as a gap in `ts_ns`.
-- About 1,800 rows per camera-chunk (under 50 KB), so the index adds nothing to the storage cost.
+- About 1,800 rows per camera-chunk (under 50 KB).
 - In the manifest `files`, each index is listed with `kind: "frame_index"`, `stream: <camera_id>`, and the same `chunk_seq` as the matching video.
 - The frame_index lives here rather than in the manifest because a manifest list would be ~216k entries/hr, and the manifest is the commit marker that is uploaded last.
 
+## Derived tick (pipeline only)
+- tick(frame) = the `steps.tick` of the latest step with `steps.ts_ns <= frame.ts_ns`, computed as an as-of join.
+- **The join runs over all of the episode's steps, concatenated in `chunk_seq` order, not per chunk.** Video and steps chunk boundaries are not aligned, so a frame can map to a tick in the previous steps chunk.
+- **Frames captured before the first control tick get tick = null.** They stay in the video and in frame_index, and are excluded from training rows.
+- The device never writes the tick into frame_index.
+
 ## Pipeline checks (dataset build, not `/complete`)
-`/complete` verifies only sha256 and bytes. The dataset pipeline checks the following for each frame_index/mp4 pair:
-1. Row count = the mp4's decoded frame count.
-2. `frame_idx` is contiguous, 0..n-1.
-3. `ts_ns` is strictly increasing.
-4. `ts_ns` is within `[start_mono_ns, end_mono_ns]` from the manifest.
+`/complete` verifies only sha256 and bytes. The dataset pipeline checks:
+1. For each frame_index/mp4 pair, row count = the mp4's decoded frame count.
+2. `frame_idx` is contiguous, 0..n-1, within each chunk.
+3. `ts_ns` is strictly increasing within each chunk and across chunks, per camera.
+4. `ts_ns` is within `[start_mono_ns, end_mono_ns]` from the manifest. *(Fallback if Alex rejects the fields: within `[min(steps.ts_ns) − 1 s, max(steps.ts_ns) + 1 s]`.)*
 5. The mp4 has no B-frames.
+6. `steps.tick` is contiguous, 0..N-1, across all steps chunks in `chunk_seq` order. `steps.ts_ns` is strictly increasing.
 
 Metric: drop rate per camera per episode, computed from `ts_ns` gaps against the nominal fps.
 
@@ -86,7 +93,7 @@ Metric: drop rate per camera per episode, computed from `ts_ns` gaps against the
   ]
 }
 ```
-- `start_ts` and `end_ts` are wall-clock times, for humans and for queries. `start_mono_ns` and `end_mono_ns` are device_monotonic, sampled at the same moments, and are used for all checks against `ts_ns`. *(Pending Alex's ack.)*
+- `start_ts` and `end_ts` are wall-clock times, for humans and for queries. `start_mono_ns` and `end_mono_ns` are device_monotonic, sampled at the same moments, and are used for checks against `ts_ns`. *(Pending Alex's ack.)*
 - `files` lists every file except `manifest.json` itself.
 - Upload only starts after the episode ends, so the full list is known when the episode is registered.
 
@@ -167,13 +174,14 @@ GET   /v0/models/{model_id}/versions/{version}  → {"sha256","bytes","format","
 | Growth at a full 8 h/day of recording | ~480 GB/mo ≈ +$11/mo each month (S3 standard) |
 
 ## Decided
-- 2026-09-29: frame→tick uses a per-camera per-chunk `frame_index` parquet with columns `frame_idx` and `ts_ns`. The tick is derived in the pipeline (Alex's proposal and corrections, accepted by Marcus).
+- 2026-09-29: frame→tick uses a per-camera per-chunk `frame_index` parquet with columns `frame_idx` and `ts_ns`. The tick is derived in the pipeline.
 - 2026-09-29: `bframes=0` is a device encoding requirement. `frame_idx` is in presentation order.
+- 2026-09-29: `steps.tick` is a global counter per episode, starting at 0. The as-of join spans all chunks. Frames before the first tick get tick = null and are excluded from training.
 
 ## Known gaps (v0.1, not blocking)
-- frame_index records capture time, not which frame the policy consumed at tick t (perception latency). `steps` will need `obs_frame_idx` per camera for faithful training data. Alex raises this at the 30 Sep meet.
+- frame_index records capture time, not which frame the policy consumed at tick t (perception latency). `steps` will need `obs_frame_idx` per camera. Alex raises this at the 30 Sep meet.
 
 ## Open
-- `start_mono_ns` / `end_mono_ns` in the manifest: **Alex** to ack, 2026-09-29 18:00.
+- `start_mono_ns` / `end_mono_ns`: **Alex** to reply ack or fallback, 2026-09-29 18:00.
 - Pinned LeRobot format version: **Alex**, at the 30 Sep meet.
 - Cloud and region: **pankaj** (setup-plan Q5 and Q6).

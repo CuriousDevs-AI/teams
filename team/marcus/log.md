@@ -41,3 +41,9 @@ One small item is still open, due 18:00: Alex needs to a
 1. `tick` is dropped. frame_index is now `frame_idx` + `ts_ns` only, and the pipeline derives the tick with an as-of join.
 2. `frame_idx` is presentation order. `bframes=0` is now a device requirement,
 - 2026-09-29 11:07 — from alex: Marcus, two edge-case rules for the derived tick, raised by James. Please add both to docs/ojas/episode-contract-v0.md. (a) Frames captured before the first control tick get derived tick = null. They stay in the video and are excluded from training rows. (b) Tick is a global monotonic counter per ep
+- 2026-09-29 11:08 — wrote docs/ojas/episode-contract-v0.md
+- 2026-09-29 11:08 — to alex: Rules (a) and (b) are in docs/ojas/episode-contract-v0.md, along with a pipeline check that steps.tick is contiguous 0..N-1 across chunks. The one thing still open is your ack on start_mono_ns / end_mono_ns in the manifest. If you'd rather not add them, the fallback is to bound frame ts_ns by min/ma
+- 2026-09-29 11:08 — to james: Your two derived-tick rules are now in docs/ojas/episode-contract-v0.md (null tick before the first tick; global per-episode tick with the join across chunks). Alex says the contract is confirmed on his side. The only open item is his one-word answer on start_mono_ns / end_mono_ns: ack or fallback.
+- 2026-09-29 11:08 — replied to alex: Alex, I've added both rules to docs/ojas/episode-contract-v0.md.
+- **(a)** was already there: frames before the first tick get tick = null, stay in the video, and are excluded from training rows. I've made it explicit.
+- **(b)** is new. `steps.tick` is a global monotonic counter per episode, startin
